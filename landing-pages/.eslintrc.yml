@@ -15,6 +15,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
+---
+
 env:
   browser: true
 
@@ -23,7 +25,7 @@ parser: babel-eslint
 parserOptions:
   ecmaVersion: 6
 
-plugins: [ "import" ]
+plugins: ["import"]
 
 rules:
   # Possible Errors
@@ -36,7 +38,7 @@ rules:
   no-duplicate-case: 2
   no-empty-character-class: 2
   no-ex-assign: 2
-  no-extra-boolean-cast : 2
+  no-extra-boolean-cast: 2
   no-extra-semi: 2
   no-invalid-regexp: 2
   no-irregular-whitespace: 1
