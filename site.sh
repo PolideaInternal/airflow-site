@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
 set -euox pipefail
 
 MY_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -37,7 +54,7 @@ function start_container {
     ensure_image_exists
 
     docker run -ti \
-        -v $(pwd):/opt/site/ \
+        -v "$(pwd)":/opt/site/ \
         -p 1313:1313 \
         -p 3000:3000 \
         airflow-site "$@"
@@ -57,6 +74,12 @@ if [[ "$#" -ge 1 ]] ; then
     elif [[ "$1" == "lint-assets" ]]; then
         ensure_node_module_exists
         start_container bash -c "cd landing-pages/site && npm run lint"
+    elif [[ "$1" == "lint-js" ]]; then
+        ensure_node_module_exists
+        start_container bash -c "cd landing-pages/site && npm run lint:js"
+    elif [[ "$1" == "lint-css" ]]; then
+        ensure_node_module_exists
+        start_container bash -c "cd landing-pages/site && npm run lint:js"
     else
         start_container "$@"
     fi

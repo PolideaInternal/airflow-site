@@ -14,25 +14,9 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-#
 ---
-dist: xenial
-language: python
+extends: default
 
-python: "3.6"
-stages:
-  - pre-test
-  - test
-services:
-  - docker
-install:
-  - ./site.sh build-image
-  - ./site.sh install-node-deps
-  - pip install -r requirements.txt
-jobs:
-  include:
-    - stage: lint
-      script:
-        - pre-commit run --all-files --show-diff-on-failure
-    - stage: build
-      script: ./site.sh build-site
+rules:
+  line-length:
+    max: 110
