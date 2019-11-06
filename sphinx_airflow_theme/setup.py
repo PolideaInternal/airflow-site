@@ -15,9 +15,25 @@
 # specific language governing permissions and limitations
 # under the License.
 
+import os
 from setuptools import setup
 
-with open('README.rst', encoding='utf-8') as file:
+REQUIRED_ADDITIONAL_FILES=[
+    "sphinx_airflow_theme/static/_gen/css/main.min.css",
+    "sphinx_airflow_theme/static/_gen/css/main-custom.min.css",
+    "sphinx_airflow_theme/static/_gen/js/docs.js"""
+]
+missing_files = [
+    f
+    for f in REQUIRED_ADDITIONAL_FILES
+    if not os.path.isfile(f)
+]
+if missing_files:
+    raise Exception(
+        "Missing files: {}. You need copy these files from dist of website.".format(missing_files)
+    )
+
+with open('README.md', encoding='utf-8') as file:
     long_description = file.read()
 
 setup(
@@ -25,8 +41,8 @@ setup(
     version='0.0.01',
     url='https://github.com/apache/airflow-site/tree/aip-11',
     license='Apache License 2.0',
-    author='Dave Snider, Read the Docs, Inc. & contributors',
-    author_email='dev@readthedocs.org',
+    author='Apache Software Foundation',
+    author_email='dev@airflow.apache.org',
     description='Airflow theme for Sphinx',
     long_description=long_description,
     long_description_content_type='text/markdown',

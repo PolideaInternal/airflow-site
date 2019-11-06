@@ -35,7 +35,9 @@ These are  ${0} commands used in various situations:
     stop                Stop the environment
     build-image         Build a Docker image with a environment
     install-node-deps   Download all the Node dependencies
-    preview             Starts the web server
+    preview-site        Starts the web server with preview of the website
+    preview             Starts the web server with preview of the Sphinx theme
+    prepare-theme       Prepares and copies files needed for the proper functioning of the sphinx theme.
     build-landing-pages Builds a landing pages
     build-site          Builds a website with documentation
     check-site-links    Checks if the links are correct in the website
@@ -255,6 +257,15 @@ elif [[ "${CMD}" == "check-site-links" ]]; then
     ensure_node_module_exists
     ensure_that_website_is_build
     run_command "/opt/site/landing-pages/" ./check-links.sh
+elif [[ "${CMD}" == "prepare-theme" ]]; then
+    ensure_that_website_is_build
+    SITE_DIST="landing-pages/dist"
+    THEME_GEN="sphinx_airflow_theme/sphinx_airflow_theme/static/_gen"
+    mkdir -p "${THEME_GEN}/css" "${THEME_GEN}/js"
+    cp ${SITE_DIST}/docs.*.js "${THEME_GEN}/js/docs.js"
+    cp ${SITE_DIST}/scss/main.min.*.css "${THEME_GEN}/css/main.min.css"
+    cp ${SITE_DIST}/scss/main-custom.min.*.css "${THEME_GEN}/css/main-custom.min.css"
+    echo "Successful copied required files"
 elif [[ "${CMD}" == "lint-js" ]]; then
     ensure_node_module_exists
     if [[ "$#" -eq 0 ]]; then

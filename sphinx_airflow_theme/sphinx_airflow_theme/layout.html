@@ -1,0 +1,210 @@
+{#
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+#}
+
+{#
+    basic/layout.html
+    ~~~~~~~~~~~~~~~~~
+
+    Master layout template for Sphinx themes.
+
+    :copyright: Copyright 2007-2019 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- set url_root = pathto('', 1) %}
+{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
+{%- if not embedded and docstitle %}
+    {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+{%- else %}
+    {%- set titlesuffix = "" %}
+{%- endif %}
+{%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="{{ lang_attr }}" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ lang_attr }}" > <!--<![endif]-->
+
+{%- macro pager() %}
+    <div class="pager" role="navigation" aria-label="related navigation">
+        {%- if prev %}
+            <a rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" >
+                <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" accesskey="p">{{ _('Previous') }}</button>
+            </a>
+        {%- else -%}
+            <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" disabled>{{ _('Previous') }}</button>
+        {%- endif %}
+        {%- if next %}
+            <a rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" >
+                <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" accesskey="n">{{ _('Next') }}</button>
+            </a>
+        {%- else -%}
+            <button class="btn-hollow btn-blue bodytext__medium--cerulean-blue" disabled>{{ _('Next') }}</button>
+        {%- endif %}
+    </div>
+{%- endmacro %}
+
+{%- macro sidebar() %}
+    <div class="td-sidebar d-print-none">
+        {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+        {%- endfor %}
+    </div>
+{%- endmacro %}
+
+{%- macro script() %}
+    <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+    {%- for js in script_files %}
+        {{ js_tag(js) }}
+    {%- endfor %}
+{%- endmacro %}
+
+{%- macro css() %}
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+
+    {%- for css in css_files %}
+        {%- if css|attr("filename") %}
+            {{ css_tag(css) }}
+        {%- else %}
+            <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+        {%- endif %}
+    {%- endfor %}
+{%- endmacro %}
+
+{%- macro sidetoc() %}
+    <nav class="wy-nav-side-toc">
+        <div class="wy-side-scroll">
+            <div class="wy-menu-vertical">
+                {{ toc }}
+            </div>
+        </div>
+    </nav>
+{%- endmacro %}
+
+{%- if html_tag %}
+    {{ html_tag }}
+{%- else %}
+    <html xmlns="http://www.w3.org/1999/xhtml"{% if language is not none %} lang="{{ language }}"{% endif %}>
+{%- endif %}
+<head>
+    {%- if not html5_doctype and not skip_ua_compatible %}
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    {%- endif %}
+    {%- if use_meta_charset or html5_doctype %}
+        <meta charset="{{ encoding }}" />
+    {%- else %}
+        <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
+    {%- endif %}
+    {{- metatags }}
+    {%- block htmltitle %}
+        <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+    {%- endblock %}
+    {%- block css %}
+        {{- css() }}
+    {%- endblock %}
+    {%- if not embedded %}
+        {%- if pageurl %}
+            <link rel="canonical" href="{{ pageurl }}" />
+        {%- endif %}
+        {%- if use_opensearch %}
+            <link rel="search" type="application/opensearchdescription+xml"
+                  title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
+                  href="{{ pathto('_static/opensearch.xml', 1) }}"/>
+        {%- endif %}
+        {%- if favicon %}
+            <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+        {%- endif %}
+    {%- endif %}
+    {%- block linktags %}
+        {%- if hasdoc('about') %}
+            <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
+        {%- endif %}
+        {%- if hasdoc('genindex') %}
+            <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+        {%- endif %}
+        {%- if hasdoc('search') %}
+            <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+        {%- endif %}
+        {%- if hasdoc('copyright') %}
+            <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+        {%- endif %}
+        {%- if next %}
+            <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+        {%- endif %}
+        {%- if prev %}
+            <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+        {%- endif %}
+    {%- endblock %}
+    {%- block extrahead %} {% endblock %}
+</head>
+
+{%- block body_tag %}<body class="td-section">{% endblock %}
+
+{%- block header %}
+    {% include "header.html" %}
+{% endblock %}
+
+{%- block content %}
+
+    <div class="roadmap container-fluid td-default base-layout">
+        <div class="d-flex">
+            {# START SIDEBAR #}
+            {{ sidebar() }}
+            {# END SIDEBAR #}
+
+            {# START BODY #}
+            <main class="col-12 col-md-9 col-xl-8" role="main">
+                {% include "breadcrumbs.html" %}
+                {# START CONTENT #}
+                <div class="rst-content">
+                    <div class="document">
+                        {%- block document %}
+                            <div class="documentwrapper">
+                                <div class="bodywrapper">
+                                    <div class="body" role="main">
+                                        {% block body %} {% endblock %}
+                                        {%- block pager %}{{ pager() }}{% endblock %}
+                                    </div>
+
+                                </div>
+                            </div>
+                        {%- endblock %}
+                    </div>
+                </div>
+                {# END CONTENT #}
+            </main>
+            {# END BODY #}
+
+            {# START SIDEBAR #}
+            {{ sidetoc() }}
+            {# END SIDEBAR #}
+        </div>
+        {% include "suggest_change_button.html" %}
+    </div>
+
+{%- endblock %}
+
+{#{%- block relbar2 %}{{ relbar() }}{% endblock %}#}
+
+{%- block footer %}
+    {% include "footer.html" %}
+{%- endblock %}
+{%- block scripts %}
+    {{- script() }}
+{%- endblock %}
+</body>
+</html>

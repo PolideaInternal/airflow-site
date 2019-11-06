@@ -18,3 +18,8 @@
 .idea/
 .DS_Store
 dist/
+*.egg-info/
+__pycache__/
+_build/
+sphinx_airflow_theme/sphinx_airflow_theme/static/_gen/
+>>>>>>> cc576483... Add sphinx theme

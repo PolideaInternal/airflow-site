@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import debounce from "lodash/debounce";
+import throttle from "lodash/throttle";
 
 const contentRoot = window.document.querySelector(".rst-content");
 const sideNavRoot = window.document.querySelector(".wy-nav-side-toc");
@@ -28,31 +28,31 @@ let currentActive = null;
 const runProgressTracking = () => {
   if (!contentRoot || !sideNavRoot) return;
 
-  const sectionsOffsets = contentRoot.querySelectorAll(".section").map((element) => ({
+  let sections = Array.from(contentRoot.querySelectorAll(".section"));
+  const sectionsOffsets = sections.map((element) => ({
     id: element.id,
     offset: element.offsetTop
   }));
 
   const handleActiveSection = () => {
-    const lastActive = currentActive;
     const currentActiveIndex = Math.max(
       sectionsOffsets.findIndex((section) => section.offset - window.scrollY + navbarHeight > 0) - 1,
       0
     );
     currentActive = sectionsOffsets[currentActiveIndex];
 
-    if (lastActive) {
-      const anchor = sideNavRoot.querySelector(`[href='#${lastActive.id}']`);
-      anchor && anchor.closest("li").classList.remove("current");
-    }
+
+    Array.from(sideNavRoot.querySelectorAll("li")).forEach(
+      (el) => el.classList.remove("current")
+    );
     if (currentActive) {
       const anchor = sideNavRoot.querySelector(`[href='#${currentActive.id}']`);
-      anchor.closest("li").classList.add("current");
+      anchor && anchor.closest("li").classList.add("current");
     }
   };
 
-  window.addEventListener("scroll", debounce(handleActiveSection, 100));
-  window.addEventListener("resize", debounce(handleActiveSection, 100));
+  window.addEventListener("scroll", throttle(handleActiveSection, 10));
+  window.addEventListener("resize", throttle(handleActiveSection, 10));
   handleActiveSection();
 };
 
