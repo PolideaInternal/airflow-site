@@ -194,44 +194,150 @@ description: >
                 </div>
                 <div class="section" id="grid-tables">
                     <h2><a class="toc-backref" href="#id51"><span class="sectnum">1.9</span> Grid tables</a><a class="headerlink" href="#grid-tables" title="Permalink to this headline">¶</a></h2>
-                    <div class="wy-table-responsive"><table class="docutils align-default">
-                            <colgroup>
-                                <col style="width: 43%">
-                                <col style="width: 21%">
-                                <col style="width: 18%">
-                                <col style="width: 18%">
-                            </colgroup>
-                            <thead>
-                            <tr class="row-odd"><th class="head"><p>Header row, column 1
-                                        (header rows optional)</p></th>
-                                <th class="head"><p>Header 2</p></th>
-                                <th class="head"><p>Header 3</p></th>
-                                <th class="head"><p>Header 4</p></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="row-even"><td><p>body row 1, column 1</p></td>
-                                <td><p>column 2</p></td>
-                                <td><p>column 3</p></td>
-                                <td><p>column 4</p></td>
-                            </tr>
-                            <tr class="row-odd"><td><p>body row 2</p></td>
-                                <td colspan="3"><p>Cells may span columns.</p></td>
-                            </tr>
-                            <tr class="row-even"><td><p>body row 3</p></td>
-                                <td rowspan="2"><p>Cells may
-                                        span rows.</p></td>
-                                <td colspan="2" rowspan="2"><ul class="simple">
-                                        <li><p>Table cells</p></li>
-                                        <li><p>contain</p></li>
-                                        <li><p>body elements.</p></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr class="row-odd"><td><p>body row 4</p></td>
-                            </tr>
-                            </tbody>
-                        </table></div>
+                    <table class="docutils align-default" style="
+">
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="width: 20%">
+                            <col style="width: 20%">
+                            <col style="width: 20%">
+                            <col style="width: 20%">
+                        </colgroup>
+                        <thead>
+                        <tr class="row-odd"><th class="head"><p>Service name</p></th>
+                            <th class="head"><p>Guide</p></th>
+                            <th class="head"><p>Hook</p></th>
+                            <th class="head"><p>Operators</p></th>
+                            <th class="head"><p>Sensors</p></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://www.atlassian.com/pl/software/jira">Atlassian Jira</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/jira_hook/index.html#module-airflow.contrib.hooks.jira_hook" title="airflow.contrib.hooks.jira_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.jira_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/jira_operator/index.html#module-airflow.contrib.operators.jira_operator" title="airflow.contrib.operators.jira_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.jira_operator</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/sensors/jira_sensor/index.html#module-airflow.contrib.sensors.jira_sensor" title="airflow.contrib.sensors.jira_sensor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.sensors.jira_sensor</span></code></a></p></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://databricks.com/">Databricks</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/databricks_hook/index.html#module-airflow.contrib.hooks.databricks_hook" title="airflow.contrib.hooks.databricks_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.databricks_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/databricks_operator/index.html#module-airflow.contrib.operators.databricks_operator" title="airflow.contrib.operators.databricks_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.databricks_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://www.datadoghq.com/">Datadog</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/datadog_hook/index.html#module-airflow.contrib.hooks.datadog_hook" title="airflow.contrib.hooks.datadog_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.datadog_hook</span></code></a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/sensors/datadog_sensor/index.html#module-airflow.contrib.sensors.datadog_sensor" title="airflow.contrib.sensors.datadog_sensor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.sensors.datadog_sensor</span></code></a></p></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://oapi.dingtalk.com">Dingding</a></p></td>
+                            <td><p><a class="reference internal" href="howto/operator/dingding.html"><span class="doc">How to use</span></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/dingding_hook/index.html#module-airflow.contrib.hooks.dingding_hook" title="airflow.contrib.hooks.dingding_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.dingding_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/dingding_operator/index.html#module-airflow.contrib.operators.dingding_operator" title="airflow.contrib.operators.dingding_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.dingding_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://discordapp.com">Discord</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/discord_webhook_hook/index.html#module-airflow.contrib.hooks.discord_webhook_hook" title="airflow.contrib.hooks.discord_webhook_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.discord_webhook_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/discord_webhook_operator/index.html#module-airflow.contrib.operators.discord_webhook_operator" title="airflow.contrib.operators.discord_webhook_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.discord_webhook_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://developers.google.com/doubleclick-advertisers">Google Campaign Manager</a></p></td>
+                            <td><p><a class="reference internal" href="howto/operator/gcp/campaign_manager.html"><span class="doc">How to use</span></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/hooks/campaign_manager/index.html#module-airflow.providers.google.marketing_platform.hooks.campaign_manager" title="airflow.providers.google.marketing_platform.hooks.campaign_manager"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.hooks.campaign_manager</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/operators/campaign_manager/index.html#module-airflow.providers.google.marketing_platform.operators.campaign_manager" title="airflow.providers.google.marketing_platform.operators.campaign_manager"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.operators.campaign_manager</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/sensors/campaign_manager/index.html#module-airflow.providers.google.marketing_platform.sensors.campaign_manager" title="airflow.providers.google.marketing_platform.sensors.campaign_manager"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.sensors.campaign_manager</span></code></a></p></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://marketingplatform.google.com/about/display-video-360/">Google Display&amp;Video 360</a></p></td>
+                            <td><p><a class="reference internal" href="howto/operator/gcp/display_video.html"><span class="doc">How to use</span></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/hooks/display_video/index.html#module-airflow.providers.google.marketing_platform.hooks.display_video" title="airflow.providers.google.marketing_platform.hooks.display_video"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.hooks.display_video</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/operators/display_video/index.html#module-airflow.providers.google.marketing_platform.operators.display_video" title="airflow.providers.google.marketing_platform.operators.display_video"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.operators.display_video</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/sensors/display_video/index.html#module-airflow.providers.google.marketing_platform.sensors.display_video" title="airflow.providers.google.marketing_platform.sensors.display_video"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.sensors.display_video</span></code></a></p></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://www.google.com/drive/">Google Drive</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/gdrive_hook/index.html#module-airflow.contrib.hooks.gdrive_hook" title="airflow.contrib.hooks.gdrive_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.gdrive_hook</span></code></a></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://marketingplatform.google.com/about/search-ads-360/">Google Search Ads 360</a></p></td>
+                            <td><p><a class="reference internal" href="howto/operator/gcp/search_ads.html"><span class="doc">How to use</span></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/hooks/search_ads/index.html#module-airflow.providers.google.marketing_platform.hooks.search_ads" title="airflow.providers.google.marketing_platform.hooks.search_ads"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.hooks.search_ads</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/operators/search_ads/index.html#module-airflow.providers.google.marketing_platform.operators.search_ads" title="airflow.providers.google.marketing_platform.operators.search_ads"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.operators.search_ads</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/providers/google/marketing_platform/sensors/search_ads/index.html#module-airflow.providers.google.marketing_platform.sensors.search_ads" title="airflow.providers.google.marketing_platform.sensors.search_ads"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.providers.google.marketing_platform.sensors.search_ads</span></code></a></p></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://www.google.com/intl/en/sheets/about/">Google Spreadsheet</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/gcp/hooks/gsheets/index.html#module-airflow.gcp.hooks.gsheets" title="airflow.gcp.hooks.gsheets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.gcp.hooks.gsheets</span></code></a></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://www.ibm.com/cloud/cloudant">IBM Cloudant</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/cloudant_hook/index.html#module-airflow.contrib.hooks.cloudant_hook" title="airflow.contrib.hooks.cloudant_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.cloudant_hook</span></code></a></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://jenkins.io/">Jenkins</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/jenkins_hook/index.html#module-airflow.contrib.hooks.jenkins_hook" title="airflow.contrib.hooks.jenkins_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.jenkins_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/jenkins_job_trigger_operator/index.html#module-airflow.contrib.operators.jenkins_job_trigger_operator" title="airflow.contrib.operators.jenkins_job_trigger_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.jenkins_job_trigger_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://www.opsgenie.com/">Opsgenie</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/opsgenie_alert_hook/index.html#module-airflow.contrib.hooks.opsgenie_alert_hook" title="airflow.contrib.hooks.opsgenie_alert_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.opsgenie_alert_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/opsgenie_alert_operator/index.html#module-airflow.contrib.operators.opsgenie_alert_operator" title="airflow.contrib.operators.opsgenie_alert_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.opsgenie_alert_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://www.qubole.com/">Qubole</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/qubole_hook/index.html#module-airflow.contrib.hooks.qubole_hook" title="airflow.contrib.hooks.qubole_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.qubole_hook</span></code></a>,
+                                    <a class="reference internal" href="_api/airflow/contrib/hooks/qubole_check_hook/index.html#module-airflow.contrib.hooks.qubole_check_hook" title="airflow.contrib.hooks.qubole_check_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.qubole_check_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/qubole_operator/index.html#module-airflow.contrib.operators.qubole_operator" title="airflow.contrib.operators.qubole_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.qubole_operator</span></code></a>,
+                                    <a class="reference internal" href="_api/airflow/contrib/operators/qubole_check_operator/index.html#module-airflow.contrib.operators.qubole_check_operator" title="airflow.contrib.operators.qubole_check_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.qubole_check_operator</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/sensors/qubole_sensor/index.html#module-airflow.contrib.sensors.qubole_sensor" title="airflow.contrib.sensors.qubole_sensor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.sensors.qubole_sensor</span></code></a></p></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://www.salesforce.com/">Salesforce</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/salesforce_hook/index.html#module-airflow.contrib.hooks.salesforce_hook" title="airflow.contrib.hooks.salesforce_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.salesforce_hook</span></code></a></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://oapi.dingtalk.com">Segment</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/segment_hook/index.html#module-airflow.contrib.hooks.segment_hook" title="airflow.contrib.hooks.segment_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.segment_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/segment_track_event_operator/index.html#module-airflow.contrib.operators.segment_track_event_operator" title="airflow.contrib.operators.segment_track_event_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.segment_track_event_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://slack.com/">Slack</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/hooks/slack_hook/index.html#module-airflow.hooks.slack_hook" title="airflow.hooks.slack_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.hooks.slack_hook</span></code></a>,
+                                    <a class="reference internal" href="_api/airflow/contrib/hooks/slack_webhook_hook/index.html#module-airflow.contrib.hooks.slack_webhook_hook" title="airflow.contrib.hooks.slack_webhook_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.slack_webhook_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/operators/slack_operator/index.html#module-airflow.operators.slack_operator" title="airflow.operators.slack_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.operators.slack_operator</span></code></a>,
+                                    <a class="reference internal" href="_api/airflow/contrib/operators/slack_webhook_operator/index.html#module-airflow.contrib.operators.slack_webhook_operator" title="airflow.contrib.operators.slack_webhook_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.slack_webhook_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://www.snowflake.com/">Snowflake</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/snowflake_hook/index.html#module-airflow.contrib.hooks.snowflake_hook" title="airflow.contrib.hooks.snowflake_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.snowflake_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/snowflake_operator/index.html#module-airflow.contrib.operators.snowflake_operator" title="airflow.contrib.operators.snowflake_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.snowflake_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-even"><td><p><a class="reference external" href="https://www.vertica.com/">Vertica</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/hooks/vertica_hook/index.html#module-airflow.contrib.hooks.vertica_hook" title="airflow.contrib.hooks.vertica_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.hooks.vertica_hook</span></code></a></p></td>
+                            <td><p><a class="reference internal" href="_api/airflow/contrib/operators/vertica_operator/index.html#module-airflow.contrib.operators.vertica_operator" title="airflow.contrib.operators.vertica_operator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.contrib.operators.vertica_operator</span></code></a></p></td>
+                            <td></td>
+                        </tr>
+                        <tr class="row-odd"><td><p><a class="reference external" href="https://www.zendesk.com/">Zendesk</a></p></td>
+                            <td></td>
+                            <td><p><a class="reference internal" href="_api/airflow/hooks/zendesk_hook/index.html#module-airflow.hooks.zendesk_hook" title="airflow.hooks.zendesk_hook"><code class="xref py py-mod docutils literal notranslate"><span class="pre">airflow.hooks.zendesk_hook</span></code></a></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="section" id="footnotes">
                     <h2><a class="toc-backref" href="#id52"><span class="sectnum">1.10</span> Footnotes</a><a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
