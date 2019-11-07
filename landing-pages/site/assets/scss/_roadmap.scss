@@ -28,7 +28,7 @@
 
   .breadcrumb {
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 
   .breadcrumb-item {
@@ -160,17 +160,25 @@
     margin-left: 10px;
 
     &::before {
-      content: url("/icons/sidebar-arrow.svg");
+      content: '►';
       position: absolute;
-      width: 14px;
-      margin-left: -10px;
-      margin-top: -2px;
-      cursor: pointer;
+      top: 6px;
+      left: -12px;
+      font-size: 8px;
+      color: #707070;
     }
 
-    &.arrow-down {
+    & > ul {
+      display: none;
+    }
+
+    &.current-section {
       &::before {
-        transform: rotate(90deg);
+        content: '▼';
+      }
+
+      & > ul {
+        display: block;
       }
     }
   }

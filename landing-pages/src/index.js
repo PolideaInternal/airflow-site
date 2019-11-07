@@ -22,7 +22,6 @@ import {handleActiveVideo} from "./js/handleActiveVideo";
 import "./js/navbarScroll";
 import "./js/drawer";
 import "./js/contentDrawer";
-import "./js/sidebarCollapse";
 import "./js/progressTracking";
 import "./js/rating";
 
