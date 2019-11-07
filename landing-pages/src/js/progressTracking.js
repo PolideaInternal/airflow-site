@@ -52,6 +52,7 @@ const runProgressTracking = () => {
   };
 
   window.addEventListener("scroll", debounce(handleActiveSection, 100));
+  window.addEventListener("resize", debounce(handleActiveSection, 100));
   handleActiveSection();
 };
 
