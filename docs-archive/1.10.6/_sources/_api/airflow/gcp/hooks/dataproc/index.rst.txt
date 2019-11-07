@@ -1,0 +1,442 @@
+:mod:`airflow.gcp.hooks.dataproc`
+=================================
+
+.. py:module:: airflow.gcp.hooks.dataproc
+
+.. autoapi-nested-parse::
+
+   This module contains a Google Cloud Dataproc hook.
+
+
+
+Module Contents
+---------------
+
+.. data:: UUID_LENGTH
+   :annotation: = 9
+
+   
+
+.. py:class:: DataprocJobStatus
+
+   Helper class with Dataproc jobs statuses.
+
+   .. attribute:: ERROR
+      :annotation: = ERROR
+
+      
+
+   .. attribute:: CANCELLED
+      :annotation: = CANCALLED
+
+      
+
+   .. attribute:: DONE
+      :annotation: = DONE
+
+      
+
+
+.. py:class:: _DataProcJob(dataproc_api:Any, project_id:str, job:Dict, region:str='global', job_error_states:Optional[Iterable[str]]=None, num_retries:int=5)
+
+   Bases: :class:`airflow.utils.log.logging_mixin.LoggingMixin`
+
+   
+   .. method:: wait_for_done(self)
+
+      Awaits the Dataproc job to complete.
+
+      :return: True if job was done
+      :rtype: bool
+
+
+
+   
+   .. method:: raise_error(self, message=None)
+
+      Raises error when Dataproc job resulted in error.
+
+      :param message: Custom message for the error.
+      :raises: Exception
+
+
+
+   
+   .. method:: get(self)
+
+      Returns Dataproc job.
+
+
+
+
+.. py:class:: _DataProcJobBuilder(project_id:str, task_id:str, cluster_name:str, job_type:str, properties:Dict[str, str])
+
+   
+   .. method:: add_labels(self, labels)
+
+      Set labels for Dataproc job.
+
+      :param labels: Labels for the job query.
+      :type labels: dict
+
+
+
+   
+   .. method:: add_variables(self, variables:List[str])
+
+      Set variables for Dataproc job.
+
+      :param variables: Variables for the job query.
+      :type variables: List[str]
+
+
+
+   
+   .. method:: add_args(self, args:List[str])
+
+      Set args for Dataproc job.
+
+      :param args: Args for the job query.
+      :type args: List[str]
+
+
+
+   
+   .. method:: add_query(self, query:List[str])
+
+      Set query uris for Dataproc job.
+
+      :param query: URIs for the job queries.
+      :type query: List[str]
+
+
+
+   
+   .. method:: add_query_uri(self, query_uri:str)
+
+      Set query uri for Dataproc job.
+
+      :param query_uri: URI for the job query.
+      :type query_uri: str
+
+
+
+   
+   .. method:: add_jar_file_uris(self, jars:List[str])
+
+      Set jars uris for Dataproc job.
+
+      :param jars: List of jars URIs
+      :type jars: List[str]
+
+
+
+   
+   .. method:: add_archive_uris(self, archives:List[str])
+
+      Set archives uris for Dataproc job.
+
+      :param archives: List of archives URIs
+      :type archives: List[str]
+
+
+
+   
+   .. method:: add_file_uris(self, files:List[str])
+
+      Set file uris for Dataproc job.
+
+      :param files: List of files URIs
+      :type files: List[str]
+
+
+
+   
+   .. method:: add_python_file_uris(self, pyfiles:List[str])
+
+      Set python file uris for Dataproc job.
+
+      :param pyfiles: List of python files URIs
+      :type pyfiles: List[str]
+
+
+
+   
+   .. method:: set_main(self, main_jar:Optional[str], main_class:Optional[str])
+
+      Set Dataproc main class.
+
+      :param main_jar: URI for the main file.
+      :type main_jar: str
+      :param main_class: Name of the main class.
+      :type main_class: str
+      :raises: Exception
+
+
+
+   
+   .. method:: set_python_main(self, main:str)
+
+      Set Dataproc main python file uri.
+
+      :param main: URI for the python main file.
+      :type main: str
+
+
+
+   
+   .. method:: set_job_name(self, name:str)
+
+      Set Dataproc job name.
+
+      :param name: Job name.
+      :type name: str
+
+
+
+   
+   .. method:: build(self)
+
+      Returns Dataproc job.
+
+      :return: Dataproc job
+      :rtype: dict
+
+
+
+
+.. py:class:: _DataProcOperation(dataproc_api:Any, operation:Dict, num_retries:int)
+
+   Bases: :class:`airflow.utils.log.logging_mixin.LoggingMixin`
+
+   Continuously polls Dataproc Operation until it completes.
+
+   
+   .. method:: wait_for_done(self)
+
+      Awaits Dataproc operation to complete.
+
+      :return: True if operation was done.
+      :rtype: bool
+
+
+
+   
+   .. method:: get(self)
+
+      Returns Dataproc operation.
+
+      :return: Dataproc operation
+
+
+
+   
+   .. method:: _check_done(self)
+
+
+
+   
+   .. method:: _raise_error(self)
+
+
+
+
+.. py:class:: DataprocHook(gcp_conn_id:str='google_cloud_default', delegate_to:Optional[str]=None, api_version:str='v1beta2')
+
+   Bases: :class:`airflow.gcp.hooks.base.GoogleCloudBaseHook`
+
+   Hook for Google Cloud Dataproc APIs.
+
+   All the methods in the hook where project_id is used must be called with
+   keyword arguments rather than positional.
+
+   :param gcp_conn_id: The connection ID to use when fetching connection info.
+   :type gcp_conn_id: str
+   :param delegate_to: The account to impersonate, if any.
+       For this to work, the service account making the request must have
+       domain-wide delegation enabled.
+   :type delegate_to: str
+   :param api_version: Version of Google Cloud API
+   :type api_version: str
+
+   
+   .. method:: get_conn(self)
+
+      Returns a Google Cloud Dataproc service object.
+
+
+
+   
+   .. method:: get_cluster(self, project_id:str, region:str, cluster_name:str)
+
+      Returns Google Cloud Dataproc cluster.
+
+      :param project_id: The id of Google Cloud Dataproc project.
+      :type project_id: str
+      :param region: The region of Google Dataproc cluster.
+      :type region: str
+      :param cluster_name: The name of the Dataproc cluster.
+      :type cluster_name: str
+      :return: Dataproc cluster
+      :rtype: dict
+
+
+
+   
+   .. method:: submit(self, project_id:str, job:Dict, region:str='global', job_error_states:Optional[Iterable[str]]=None)
+
+      Submits Google Cloud Dataproc job.
+
+      :param project_id: The id of Google Cloud Dataproc project.
+      :type project_id: str
+      :param job: The job to be submitted
+      :type job: dict
+      :param region: The region of Google Dataproc cluster.
+      :type region: str
+      :param job_error_states: Job states that should be considered error states.
+      :type job_error_states: List[str]
+      :raises: Excepion
+
+
+
+   
+   .. method:: create_job_template(self, task_id:str, cluster_name:str, job_type:str, properties:Dict[str, str])
+
+      Creates Google Cloud Dataproc job template.
+
+      :param task_id: id of the task
+      :type task_id: str
+      :param cluster_name: Dataproc cluster name.
+      :type cluster_name: str
+      :param job_type: Type of Dataproc job.
+      :type job_type: str
+      :param properties: Additional properties of the job.
+      :type properties: dict
+      :return: Dataproc Job
+
+
+
+   
+   .. method:: wait(self, operation:Dict)
+
+      Awaits for Google Cloud Dataproc Operation to complete.
+
+
+
+   
+   .. method:: cancel(self, project_id:str, job_id:str, region:str='global')
+
+      Cancel a Google Cloud DataProc job.
+
+      :param project_id: Name of the project the job belongs to
+      :type project_id: str
+      :param job_id: Identifier of the job to cancel
+      :type job_id: int
+      :param region: Region used for the job
+      :type region: str
+      :return: A Job json dictionary representing the canceled job
+
+
+
+   
+   .. method:: get_final_cluster_state(self, project_id, region, cluster_name, logger)
+
+      Poll for the state of a cluster until one is available
+
+      :param project_id:
+      :param region:
+      :param cluster_name:
+      :param logger:
+      :return:
+
+
+
+   
+   .. staticmethod:: get_cluster_state(service, project_id, region, cluster_name)
+
+      Get the state of a cluster if it has one, otherwise None
+
+      :param service:
+      :param project_id:
+      :param region:
+      :param cluster_name:
+      :return:
+
+
+
+   
+   .. staticmethod:: find_cluster(service, project_id, region, cluster_name)
+
+      Retrieve a cluster from the project/region if it exists, otherwise None
+
+      :param service:
+      :param project_id:
+      :param region:
+      :param cluster_name:
+      :return:
+
+
+
+   
+   .. staticmethod:: get_cluster_list_for_project(service, project_id, region)
+
+      List all clusters for a given project/region, an empty list if none exist
+
+      :param service:
+      :param project_id:
+      :param region:
+      :return:
+
+
+
+   
+   .. staticmethod:: execute_dataproc_diagnose(service, project_id, region, cluster_name)
+
+      Execute the diagonse command against a given cluster, useful to get debugging
+      information if something has gone wrong or cluster creation failed.
+
+      :param service:
+      :param project_id:
+      :param region:
+      :param cluster_name:
+      :return:
+
+
+
+   
+   .. staticmethod:: execute_delete(service, project_id, region, cluster_name)
+
+      Delete a specified cluster
+
+      :param service:
+      :param project_id:
+      :param region:
+      :param cluster_name:
+      :return: The identifier of the operation being executed
+
+
+
+   
+   .. staticmethod:: wait_for_operation_done(service, operation_name)
+
+      Poll for the completion of a specific GCP operation
+
+      :param service:
+      :param operation_name:
+      :return: The response code of the completed operation
+
+
+
+   
+   .. staticmethod:: wait_for_operation_done_or_error(service, operation_name)
+
+      Block until the specified operation is done. Throws an AirflowException if
+      the operation completed but had an error
+
+      :param service:
+      :param operation_name:
+      :return:
+
+
+
+

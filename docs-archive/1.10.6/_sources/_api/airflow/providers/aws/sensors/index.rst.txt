@@ -1,0 +1,16 @@
+:mod:`airflow.providers.aws.sensors`
+====================================
+
+.. py:module:: airflow.providers.aws.sensors
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   athena/index.rst
+   sqs/index.rst
+
+

@@ -1,0 +1,16 @@
+:mod:`airflow.providers.aws.operators`
+======================================
+
+.. py:module:: airflow.providers.aws.operators
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   athena/index.rst
+   sqs/index.rst
+
+

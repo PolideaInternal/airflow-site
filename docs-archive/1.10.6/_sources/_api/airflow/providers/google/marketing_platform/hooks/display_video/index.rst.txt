@@ -1,0 +1,82 @@
+:mod:`airflow.providers.google.marketing_platform.hooks.display_video`
+======================================================================
+
+.. py:module:: airflow.providers.google.marketing_platform.hooks.display_video
+
+.. autoapi-nested-parse::
+
+   This module contains Google DisplayVideo hook.
+
+
+
+Module Contents
+---------------
+
+.. py:class:: GoogleDisplayVideo360Hook(api_version:str='v1', gcp_conn_id:str='google_cloud_default', delegate_to:Optional[str]=None)
+
+   Bases: :class:`airflow.gcp.hooks.base.GoogleCloudBaseHook`
+
+   Hook for Google Display & Video 360.
+
+   .. attribute:: _conn
+      :annotation: :Optional[Any]
+
+      
+
+   
+   .. method:: get_conn(self)
+
+      Retrieves connection to DisplayVideo.
+
+
+
+   
+   .. method:: create_query(self, query:Dict[str, Any])
+
+      Creates a query.
+
+      :param query: Query object to be passed to request body.
+      :type query: Dict[str, Any]
+
+
+
+   
+   .. method:: delete_query(self, query_id:str)
+
+      Deletes a stored query as well as the associated stored reports.
+
+      :param query_id: Query ID to delete.
+      :type query_id: str
+
+
+
+   
+   .. method:: get_query(self, query_id:str)
+
+      Retrieves a stored query.
+
+      :param query_id: Query ID to retrieve.
+      :type query_id: str
+
+
+
+   
+   .. method:: list_queries(self)
+
+      Retrieves stored queries.
+
+
+
+   
+   .. method:: run_query(self, query_id:str, params:Dict[str, Any])
+
+      Runs a stored query to generate a report.
+
+      :param query_id: Query ID to run.
+      :type query_id: str
+      :param params: Parameters for the report.
+      :type params: Dict[str, Any]
+
+
+
+

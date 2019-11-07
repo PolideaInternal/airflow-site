@@ -1,0 +1,301 @@
+:mod:`airflow.gcp.hooks.dataflow`
+=================================
+
+.. py:module:: airflow.gcp.hooks.dataflow
+
+.. autoapi-nested-parse::
+
+   This module contains a Google Dataflow Hook.
+
+
+
+Module Contents
+---------------
+
+.. data:: DEFAULT_DATAFLOW_LOCATION
+   :annotation: = us-central1
+
+   
+
+.. data:: JOB_ID_PATTERN
+   
+
+   
+
+.. py:class:: DataflowJobStatus
+
+   Helper class with Dataflow job statuses.
+
+   .. attribute:: JOB_STATE_DONE
+      :annotation: = JOB_STATE_DONE
+
+      
+
+   .. attribute:: JOB_STATE_RUNNING
+      :annotation: = JOB_STATE_RUNNING
+
+      
+
+   .. attribute:: JOB_STATE_FAILED
+      :annotation: = JOB_STATE_FAILED
+
+      
+
+   .. attribute:: JOB_STATE_CANCELLED
+      :annotation: = JOB_STATE_CANCELLED
+
+      
+
+   .. attribute:: JOB_STATE_PENDING
+      :annotation: = JOB_STATE_PENDING
+
+      
+
+   .. attribute:: FAILED_END_STATES
+      
+
+      
+
+   .. attribute:: SUCCEEDED_END_STATES
+      
+
+      
+
+   .. attribute:: END_STATES
+      
+
+      
+
+
+.. py:class:: DataflowJobType
+
+   Helper class with Dataflow job types.
+
+   .. attribute:: JOB_TYPE_UNKNOWN
+      :annotation: = JOB_TYPE_UNKNOWN
+
+      
+
+   .. attribute:: JOB_TYPE_BATCH
+      :annotation: = JOB_TYPE_BATCH
+
+      
+
+   .. attribute:: JOB_TYPE_STREAMING
+      :annotation: = JOB_TYPE_STREAMING
+
+      
+
+
+.. py:class:: _DataflowJobsController(dataflow:Any, project_number:str, name:str, location:str, poll_sleep:int=10, job_id:Optional[str]=None, num_retries:int=0, multiple_jobs:bool=False)
+
+   Bases: :class:`airflow.utils.log.logging_mixin.LoggingMixin`
+
+   
+   .. method:: is_job_running(self)
+
+      Helper method to check if jos is still running in dataflow
+
+      :return: True if job is running.
+      :rtype: bool
+
+
+
+   
+   .. method:: _get_dataflow_jobs(self)
+
+      Helper method to get list of jobs that start with job name or id
+
+      :return: list of jobs including id's
+      :rtype: list
+
+
+
+   
+   .. method:: _get_jobs(self)
+
+      Helper method to get all jobs by name
+
+      :return: jobs
+      :rtype: list
+
+
+
+   
+   .. method:: check_dataflow_job_state(self, job)
+
+      Helper method to check the state of all jobs in dataflow for this task
+      if job failed raise exception
+
+      :return: True if job is done.
+      :rtype: bool
+      :raise: Exception
+
+
+
+   
+   .. method:: wait_for_done(self)
+
+      Helper method to wait for result of submitted job.
+
+      :return: True if job is done.
+      :rtype: bool
+      :raise: Exception
+
+
+
+   
+   .. method:: get(self)
+
+      Returns Dataflow job.
+      :return: list of jobs
+      :rtype: list
+
+
+
+
+.. py:class:: _DataflowRunner(cmd:Union[List, str])
+
+   Bases: :class:`airflow.utils.log.logging_mixin.LoggingMixin`
+
+   
+   .. method:: _read_line_by_fd(self, fd)
+
+
+
+   
+   .. method:: _extract_job(self, line:str)
+
+      Extracts job_id.
+
+      :param line: URL from which job_id has to be extracted
+      :type line: str
+      :return: job_id or None if no match
+      :rtype: Optional[str]
+
+
+
+   
+   .. method:: wait_for_done(self)
+
+      Waits for Dataflow job to complete.
+
+      :return: Job id
+      :rtype: Optional[str]
+
+
+
+
+.. py:class:: DataFlowHook(gcp_conn_id:str='google_cloud_default', delegate_to:Optional[str]=None, poll_sleep:int=10)
+
+   Bases: :class:`airflow.gcp.hooks.base.GoogleCloudBaseHook`
+
+   Hook for Google Dataflow.
+
+   All the methods in the hook where project_id is used must be called with
+   keyword arguments rather than positional.
+
+   
+   .. method:: get_conn(self)
+
+      Returns a Google Cloud Dataflow service object.
+
+
+
+   
+   .. method:: _start_dataflow(self, variables:Dict, name:str, command_prefix:List[str], label_formatter:Callable[[Dict], List[str]], multiple_jobs:bool=False)
+
+
+
+   
+   .. staticmethod:: _set_variables(variables:Dict)
+
+
+
+   
+   .. method:: start_java_dataflow(self, job_name:str, variables:Dict, jar:str, job_class:Optional[str]=None, append_job_name:bool=True, multiple_jobs:bool=False)
+
+      Starts Dataflow java job.
+
+      :param job_name: The name of the job.
+      :type job_name: str
+      :param variables: Variables passed to the job.
+      :type variables: dict
+      :param jar: Name of the jar for the job
+      :type job_class: str
+      :param job_class: Name of the java class for the job.
+      :type job_class: str
+      :param append_job_name: True if unique suffix has to be appended to job name.
+      :type append_job_name: bool
+      :param multiple_jobs: True if to check for multiple job in dataflow
+      :type multiple_jobs: bool
+
+
+
+   
+   .. method:: start_template_dataflow(self, job_name:str, variables:Dict, parameters:Dict, dataflow_template:str, append_job_name:bool=True)
+
+      Starts Dataflow template job.
+
+      :param job_name: The name of the job.
+      :type job_name: str
+      :param variables: Variables passed to the job.
+      :type variables: dict
+      :param parameters: Parameters fot the template
+      :type parameters: dict
+      :param dataflow_template: GCS path to the template.
+      :type dataflow_template: str
+      :param append_job_name: True if unique suffix has to be appended to job name.
+      :type append_job_name: bool
+
+
+
+   
+   .. method:: start_python_dataflow(self, job_name:str, variables:Dict, dataflow:str, py_options:List[str], append_job_name:bool=True, py_interpreter:str='python2')
+
+      Starts Dataflow job.
+
+      :param job_name: The name of the job.
+      :type job_name: str
+      :param variables: Variables passed to the job.
+      :type variables: dict
+      :param dataflow: Name of the Dataflow process.
+      :type dataflow: str
+      :param py_options: Additional options.
+      :type py_options: list
+      :param append_job_name: True if unique suffix has to be appended to job name.
+      :type append_job_name: bool
+      :param py_interpreter: Python version of the beam pipeline.
+          If None, this defaults to the python2.
+          To track python versions supported by beam and related
+          issues check: https://issues.apache.org/jira/browse/BEAM-1251
+      :type py_interpreter: str
+
+
+
+   
+   .. staticmethod:: _build_dataflow_job_name(job_name:str, append_job_name:bool=True)
+
+
+
+   
+   .. staticmethod:: _build_cmd(variables:Dict, label_formatter:Callable)
+
+
+
+   
+   .. method:: _start_template_dataflow(self, name:str, variables:Dict[str, Any], parameters:Dict, dataflow_template:str)
+
+
+
+   
+   .. method:: is_job_dataflow_running(self, name:str, variables:Dict)
+
+      Helper method to check if jos is still running in dataflow
+
+      :return: True if job is running.
+      :rtype: bool
+
+
+
+

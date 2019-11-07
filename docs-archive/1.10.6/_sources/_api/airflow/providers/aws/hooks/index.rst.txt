@@ -1,0 +1,17 @@
+:mod:`airflow.providers.aws.hooks`
+==================================
+
+.. py:module:: airflow.providers.aws.hooks
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   athena/index.rst
+   s3/index.rst
+   sqs/index.rst
+
+

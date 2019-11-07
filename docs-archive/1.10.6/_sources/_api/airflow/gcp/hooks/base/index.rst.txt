@@ -1,0 +1,222 @@
+:mod:`airflow.gcp.hooks.base`
+=============================
+
+.. py:module:: airflow.gcp.hooks.base
+
+.. autoapi-nested-parse::
+
+   This module contains a Google Cloud API base hook.
+
+
+
+Module Contents
+---------------
+
+.. data:: logger
+   
+
+   
+
+.. data:: _DEFAULT_SCOPES
+   :annotation: :Sequence[str] = ['https://www.googleapis.com/auth/cloud-platform']
+
+   
+
+.. data:: INVALID_KEYS
+   :annotation: = ['DefaultRequestsPerMinutePerProject', 'DefaultRequestsPerMinutePerUser', 'RequestsPerMinutePerProject', 'Resource has been exhausted (e.g. check quota).']
+
+   
+
+.. data:: INVALID_REASONS
+   :annotation: = ['userRateLimitExceeded']
+
+   
+
+.. function:: is_soft_quota_exception(exception:Exception)
+   API for Google services does not have a standardized way to report quota violation errors.
+   The function has been adapted by trial and error to the following services:
+
+   * Google Translate
+   * Google Vision
+   * Google Text-to-Speech
+   * Google Speech-to-Text
+   * Google Natural Language
+   * Google Video Intelligence
+
+
+.. py:class:: retry_if_temporary_quota
+
+   Bases: :class:`tenacity.retry_if_exception`
+
+   Retries if there was an exception for exceeding the temporary quote limit.
+
+
+.. data:: RT
+   
+
+   
+
+.. py:class:: GoogleCloudBaseHook(gcp_conn_id:str='google_cloud_default', delegate_to:Optional[str]=None)
+
+   Bases: :class:`airflow.hooks.base_hook.BaseHook`
+
+   A base hook for Google cloud-related hooks. Google cloud has a shared REST
+   API client that is built in the same way no matter which service you use.
+   This class helps construct and authorize the credentials needed to then
+   call googleapiclient.discovery.build() to actually discover and build a client
+   for a Google cloud service.
+
+   The class also contains some miscellaneous helper functions.
+
+   All hook derived from this base hook use the 'Google Cloud Platform' connection
+   type. Three ways of authentication are supported:
+
+   Default credentials: Only the 'Project Id' is required. You'll need to
+   have set up default credentials, such as by the
+   ``GOOGLE_APPLICATION_DEFAULT`` environment variable or from the metadata
+   server on Google Compute Engine.
+
+   JSON key file: Specify 'Project Id', 'Keyfile Path' and 'Scope'.
+
+   Legacy P12 key files are not supported.
+
+   JSON data provided in the UI: Specify 'Keyfile JSON'.
+
+   :param gcp_conn_id: The connection ID to use when fetching connection info.
+   :type gcp_conn_id: str
+   :param delegate_to: The account to impersonate, if any.
+       For this to work, the service account making the request must have
+       domain-wide delegation enabled.
+   :type delegate_to: str
+
+   .. attribute:: project_id
+      
+
+      Returns project id.
+
+      :return: id of the project
+      :rtype: str
+
+
+   .. attribute:: num_retries
+      
+
+      Returns num_retries from Connection.
+
+      :return: the number of times each API request should be retried
+      :rtype: int
+
+
+   .. attribute:: client_info
+      
+
+      Return client information used to generate a user-agent for API calls.
+
+      It allows for better errors tracking.
+
+      This object is only used by the google-cloud-* libraries that are built specifically for
+      the Google Cloud Platform. It is not supported by The Google APIs Python Client that use Discovery
+      based APIs.
+
+
+   .. attribute:: scopes
+      
+
+      Return OAuth 2.0 scopes.
+
+      :return: Returns the scope defined in the connection configuration, or the default scope
+      :rtype: Sequence[str]
+
+
+   
+   .. method:: _get_credentials_and_project_id(self)
+
+      Returns the Credentials object for Google API and the associated project_id
+
+
+
+   
+   .. method:: _get_credentials(self)
+
+      Returns the Credentials object for Google API
+
+
+
+   
+   .. method:: _get_access_token(self)
+
+      Returns a valid access token from Google API Credentials
+
+
+
+   
+   .. method:: _authorize(self)
+
+      Returns an authorized HTTP object to be used to build a Google cloud
+      service hook connection.
+
+
+
+   
+   .. method:: _get_field(self, f:str, default:Any=None)
+
+      Fetches a field from extras, and returns it. This is some Airflow
+      magic. The google_cloud_platform hook type adds custom UI elements
+      to the hook page, which allow admins to specify service_account,
+      key_path, etc. They get formatted as shown below.
+
+
+
+   
+   .. staticmethod:: quota_retry(*args, **kwargs)
+
+      A decorator who provides a mechanism to repeat requests in response to exceeding a temporary quote
+      limit.
+
+
+
+   
+   .. staticmethod:: catch_http_exception(func:Callable[..., RT])
+
+      Function decorator that intercepts HTTP Errors and raises AirflowException
+      with more informative message.
+
+
+
+   
+   .. staticmethod:: fallback_to_default_project_id(func:Callable[..., RT])
+
+      Decorator that provides fallback for Google Cloud Platform project id. If
+      the project is None it will be replaced with the project_id from the
+      service account the Hook is authenticated with. Project id can be specified
+      either via project_id kwarg or via first parameter in positional args.
+
+      :param func: function to wrap
+      :return: result of the function call
+
+
+
+   
+   .. staticmethod:: provide_gcp_credential_file(func:Callable[..., RT])
+
+      Function decorator that provides a GCP credentials for application supporting Application
+      Default Credentials (ADC) strategy.
+
+      It is recommended to use ``provide_gcp_credential_file_as_context`` context manager to limit the
+      scope when authorization data is available. Using context manager also
+      makes it easier to use multiple connection in one function.
+
+
+
+   
+   .. method:: provide_gcp_credential_file_as_context(self)
+
+      Context manager that provides a GCP credentials for application supporting `Application
+      Default Credentials (ADC) strategy <https://cloud.google.com/docs/authentication/production>`__.
+
+      It can be used to provide credentials for external programs (e.g. gcloud) that expect authorization
+      file in ``GOOGLE_APPLICATION_CREDENTIALS`` environment variable.
+
+
+
+

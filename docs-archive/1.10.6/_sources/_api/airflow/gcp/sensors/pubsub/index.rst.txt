@@ -1,0 +1,77 @@
+:mod:`airflow.gcp.sensors.pubsub`
+=================================
+
+.. py:module:: airflow.gcp.sensors.pubsub
+
+.. autoapi-nested-parse::
+
+   This module contains a Google PubSub sensor.
+
+
+
+Module Contents
+---------------
+
+.. py:class:: PubSubPullSensor(project_id:str, subscription:str, max_messages:int=5, return_immediately:bool=False, ack_messages:bool=False, gcp_conn_id:str='google_cloud_default', delegate_to:Optional[str]=None, project:Optional[str]=None, *args, **kwargs)
+
+   Bases: :class:`airflow.sensors.base_sensor_operator.BaseSensorOperator`
+
+   Pulls messages from a PubSub subscription and passes them through XCom.
+
+   This sensor operator will pull up to ``max_messages`` messages from the
+   specified PubSub subscription. When the subscription returns messages,
+   the poke method's criteria will be fulfilled and the messages will be
+   returned from the operator and passed through XCom for downstream tasks.
+
+   If ``ack_messages`` is set to True, messages will be immediately
+   acknowledged before being returned, otherwise, downstream tasks will be
+   responsible for acknowledging them.
+
+   ``project`` and ``subscription`` are templated so you can use
+   variables in them.
+
+   :param project: the GCP project ID for the subscription (templated)
+   :type project: str
+   :param subscription: the Pub/Sub subscription name. Do not include the
+       full subscription path.
+   :type subscription: str
+   :param max_messages: The maximum number of messages to retrieve per
+       PubSub pull request
+   :type max_messages: int
+   :param return_immediately: If True, instruct the PubSub API to return
+       immediately if no messages are available for delivery.
+   :type return_immediately: bool
+   :param ack_messages: If True, each message will be acknowledged
+       immediately rather than by any downstream tasks
+   :type ack_messages: bool
+   :param gcp_conn_id: The connection ID to use connecting to
+       Google Cloud Platform.
+   :type gcp_conn_id: str
+   :param delegate_to: The account to impersonate, if any.
+       For this to work, the service account making the request
+       must have domain-wide delegation enabled.
+   :type delegate_to: str
+
+   .. attribute:: template_fields
+      :annotation: = ['project_id', 'subscription']
+
+      
+
+   .. attribute:: ui_color
+      :annotation: = #ff7f50
+
+      
+
+   
+   .. method:: execute(self, context)
+
+      Overridden to allow messages to be passed
+
+
+
+   
+   .. method:: poke(self, context)
+
+
+
+

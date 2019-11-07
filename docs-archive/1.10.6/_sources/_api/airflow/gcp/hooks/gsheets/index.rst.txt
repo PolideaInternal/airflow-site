@@ -1,0 +1,207 @@
+:mod:`airflow.gcp.hooks.gsheets`
+================================
+
+.. py:module:: airflow.gcp.hooks.gsheets
+
+.. autoapi-nested-parse::
+
+   This module contains a Google Sheets API hook
+
+
+
+Module Contents
+---------------
+
+.. py:class:: GSheetsHook(spreadsheet_id:str, gcp_conn_id:str='google_cloud_default', api_version:str='v4', delegate_to:Optional[str]=None)
+
+   Bases: :class:`airflow.gcp.hooks.base.GoogleCloudBaseHook`
+
+   Interact with Google Sheets via GCP connection
+   Reading and writing cells in Google Sheet:
+   https://developers.google.com/sheets/api/guides/values
+
+   :param gcp_conn_id: The connection ID to use when fetching connection info.
+   :type gcp_conn_id: str
+   :param spreadsheet_id: The Google Sheet ID to interact with
+   :type spreadsheet_id: str
+   :param api_version: API Version
+   :type api_version: str
+   :param delegate_to: The account to impersonate, if any.
+       For this to work, the service account making the request must have
+       domain-wide delegation enabled.
+   :type delegate_to: str
+
+   
+   .. method:: get_conn(self)
+
+      Retrieves connection to Google Sheets.
+
+      :return: Google Sheets services object.
+      :rtype: Any
+
+
+
+   
+   .. method:: get_values(self, range_:str, major_dimension:str='DIMENSION_UNSPECIFIED', value_render_option:str='FORMATTED_VALUE', date_time_render_option:str='SERIAL_NUMBER')
+
+      Gets values from Google Sheet from a single range
+      https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get
+
+      :param range_: The A1 notation of the values to retrieve.
+      :type range_: str
+      :param major_dimension: Indicates which dimension an operation should apply to.
+          DIMENSION_UNSPECIFIED, ROWS, or COLUMNS
+      :type major_dimension: str
+      :param value_render_option: Determines how values should be rendered in the output.
+          FORMATTED_VALUE, UNFORMATTED_VALUE, or FORMULA
+      :type value_render_option: str
+      :param date_time_render_option: Determines how dates should be rendered in the output.
+          SERIAL_NUMBER or FORMATTED_STRING
+      :type date_time_render_option: str
+      :return: Google Sheets API response.
+      :rtype: Dict
+
+
+
+   
+   .. method:: batch_get_values(self, ranges:List, major_dimension:str='DIMENSION_UNSPECIFIED', value_render_option:str='FORMATTED_VALUE', date_time_render_option:str='SERIAL_NUMBER')
+
+      Gets values from Google Sheet from a list of ranges
+      https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchGet
+
+      :param ranges: The A1 notation of the values to retrieve.
+      :type ranges: List
+      :param major_dimension: Indicates which dimension an operation should apply to.
+          DIMENSION_UNSPECIFIED, ROWS, or COLUMNS
+      :type major_dimension: str
+      :param value_render_option: Determines how values should be rendered in the output.
+          FORMATTED_VALUE, UNFORMATTED_VALUE, or FORMULA
+      :type value_render_option: str
+      :param date_time_render_option: Determines how dates should be rendered in the output.
+          SERIAL_NUMBER or FORMATTED_STRING
+      :type date_time_render_option: str
+      :return: Google Sheets API response.
+      :rtype: Dict
+
+
+
+   
+   .. method:: update_values(self, range_:str, values:List, major_dimension:str='ROWS', value_input_option:str='RAW', include_values_in_response:bool=False, value_render_option:str='FORMATTED_VALUE', date_time_render_option:str='SERIAL_NUMBER')
+
+      Updates values from Google Sheet from a single range
+      https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update
+
+      :param range_: The A1 notation of the values to retrieve.
+      :type range_: str
+      :param values: Data within a range of the spreadsheet.
+      :type values: List
+      :param major_dimension: Indicates which dimension an operation should apply to.
+          DIMENSION_UNSPECIFIED, ROWS, or COLUMNS
+      :type major_dimension: str
+      :param value_input_option: Determines how input data should be interpreted.
+          RAW or USER_ENTERED
+      :type value_input_option: str
+      :param include_values_in_response: Determines if the update response should
+          include the values of the cells that were updated.
+      :type include_values_in_response: bool
+      :param value_render_option: Determines how values should be rendered in the output.
+          FORMATTED_VALUE, UNFORMATTED_VALUE, or FORMULA
+      :type value_render_option: str
+      :param date_time_render_option: Determines how dates should be rendered in the output.
+          SERIAL_NUMBER or FORMATTED_STRING
+      :type date_time_render_option: str
+      :return: Google Sheets API response.
+      :rtype: Dict
+
+
+
+   
+   .. method:: batch_update_values(self, ranges:List, values:List, major_dimension:str='ROWS', value_input_option:str='RAW', include_values_in_response:bool=False, value_render_option:str='FORMATTED_VALUE', date_time_render_option:str='SERIAL_NUMBER')
+
+      Updates values from Google Sheet for multiple ranges
+      https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate
+
+      :param ranges: The A1 notation of the values to retrieve.
+      :type ranges: List
+      :param values: Data within a range of the spreadsheet.
+      :type values: List
+      :param major_dimension: Indicates which dimension an operation should apply to.
+          DIMENSION_UNSPECIFIED, ROWS, or COLUMNS
+      :type major_dimension: str
+      :param value_input_option: Determines how input data should be interpreted.
+          RAW or USER_ENTERED
+      :type value_input_option: str
+      :param include_values_in_response: Determines if the update response should
+          include the values of the cells that were updated.
+      :type include_values_in_response: bool
+      :param value_render_option: Determines how values should be rendered in the output.
+          FORMATTED_VALUE, UNFORMATTED_VALUE, or FORMULA
+      :type value_render_option: str
+      :param date_time_render_option: Determines how dates should be rendered in the output.
+          SERIAL_NUMBER or FORMATTED_STRING
+      :type date_time_render_option: str
+      :return: Google Sheets API response.
+      :rtype: Dict
+
+
+
+   
+   .. method:: append_values(self, range_:str, values:List, major_dimension:str='ROWS', value_input_option:str='RAW', insert_data_option:str='OVERWRITE', include_values_in_response:bool=False, value_render_option:str='FORMATTED_VALUE', date_time_render_option:str='SERIAL_NUMBER')
+
+      Append values from Google Sheet from a single range
+      https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append
+
+      :param range_: The A1 notation of the values to retrieve.
+      :type range_: str
+      :param values: Data within a range of the spreadsheet.
+      :type values: List
+      :param major_dimension: Indicates which dimension an operation should apply to.
+          DIMENSION_UNSPECIFIED, ROWS, or COLUMNS
+      :type major_dimension: str
+      :param value_input_option: Determines how input data should be interpreted.
+          RAW or USER_ENTERED
+      :type value_input_option: str
+      :param insert_data_option: Determines how existing data is changed when new data is input.
+          OVERWRITE or INSERT_ROWS
+      :type insert_data_option: str
+      :param include_values_in_response: Determines if the update response should
+          include the values of the cells that were updated.
+      :type include_values_in_response: bool
+      :param value_render_option: Determines how values should be rendered in the output.
+          FORMATTED_VALUE, UNFORMATTED_VALUE, or FORMULA
+      :type value_render_option: str
+      :param date_time_render_option: Determines how dates should be rendered in the output.
+          SERIAL_NUMBER or FORMATTED_STRING
+      :type date_time_render_option: str
+      :return: Google Sheets API response.
+      :rtype: Dict
+
+
+
+   
+   .. method:: clear(self, range_:str)
+
+      Clear values from Google Sheet from a single range
+      https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear
+
+      :param range_: The A1 notation of the values to retrieve.
+      :type range_: str
+      :return: Google Sheets API response.
+      :rtype: Dict
+
+
+
+   
+   .. method:: batch_clear(self, ranges:List)
+
+      Clear values from Google Sheet from a list of ranges
+      https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchClear
+
+      :param ranges: The A1 notation of the values to retrieve.
+      :type ranges: List
+      :return: Google Sheets API response.
+      :rtype: Dict
+
+
+
+

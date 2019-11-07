@@ -1,0 +1,45 @@
+:mod:`airflow.providers.google.marketing_platform.sensors.display_video`
+========================================================================
+
+.. py:module:: airflow.providers.google.marketing_platform.sensors.display_video
+
+.. autoapi-nested-parse::
+
+   Sensor for detecting the completion of DV360 reports.
+
+
+
+Module Contents
+---------------
+
+.. py:class:: GoogleDisplayVideo360ReportSensor(report_id:str, api_version:str='v1', gcp_conn_id:str='google_cloud_default', delegate_to:Optional[str]=None, *args, **kwargs)
+
+   Bases: :class:`airflow.sensors.base_sensor_operator.BaseSensorOperator`
+
+   Sensor for detecting the completion of DV360 reports.
+
+   .. seealso::
+       For more information on how to use this operator, take a look at the guide:
+       :ref:`howto/operator:GoogleDisplayVideo360ReportSensor`
+
+   :param report_id: Report ID to delete.
+   :type report_id: str
+   :param api_version: The version of the api that will be requested for example 'v3'.
+   :type api_version: str
+   :param gcp_conn_id: The connection ID to use when fetching connection info.
+   :type gcp_conn_id: str
+   :param delegate_to: The account to impersonate, if any. For this to work, the service accountmaking the
+       request must have  domain-wide delegation enabled.
+   :type delegate_to: str
+
+   .. attribute:: template_fields
+      :annotation: = ['report_id']
+
+      
+
+   
+   .. method:: poke(self, context:Dict)
+
+
+
+
