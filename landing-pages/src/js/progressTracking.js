@@ -27,7 +27,6 @@ let currentActive = null;
 const runProgressTracking = () => {
   if (!contentRoot || !sideNavRoot) return;
 
-  const sectionsOffsets = [];
   const sectionsOffsets = contentRoot.querySelectorAll(".section").map((element) => ({
     id: element.id,
     offset: element.offsetTop
