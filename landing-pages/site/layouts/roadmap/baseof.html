@@ -28,10 +28,11 @@
 </header>
 <div class="roadmap container-fluid td-default base-layout">
     <div class="content-drawer-wrapper">
-        <button class="navbar__toggle-button" id="content-open-button">
+        <button class="content-drawer__toggle-button" id="content-open-button">
             {{ with resources.Get "icons/content-hamburger-icon.svg" }}
-                <div id="hamburger-icon" class="navbar__toggle-button--icon visible">
+                <div id="hamburger-icon" class="content-drawer__toggle-button--icon visible">
                     {{ .Content | safeHTML }}
+                    <span class="bodytext__mobile--brownish-grey">Content</span>
                 </div>
             {{ end }}
         </button>

@@ -52,4 +52,31 @@
 
 .content-drawer {
   padding: 20px 40px;
+
+  &__toggle-button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: relative;
+    width: 26px;
+    height: 20px;
+
+    &--icon {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.2s ease-out;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      &.visible {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
 }
