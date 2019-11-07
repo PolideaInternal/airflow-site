@@ -21,6 +21,7 @@ import debounce from "lodash/debounce";
 
 const contentRoot = window.document.querySelector(".rst-content");
 const sideNavRoot = window.document.querySelector(".wy-nav-side-toc");
+const navbarHeight = window.document.querySelector("header > nav").offsetHeight;
 
 let currentActive = null;
 
@@ -35,7 +36,7 @@ const runProgressTracking = () => {
   const handleActiveSection = () => {
     const lastActive = currentActive;
     const currentActiveIndex = Math.max(
-      sectionsOffsets.findIndex((section) => section.offset - window.scrollY + 123 > 0) - 1,
+      sectionsOffsets.findIndex((section) => section.offset - window.scrollY + navbarHeight > 0) - 1,
       0
     );
     currentActive = sectionsOffsets[currentActiveIndex];
