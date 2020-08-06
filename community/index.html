@@ -31,20 +31,20 @@
 <meta name="theme-color" content="#ffffff">
 
 <title>Community | Apache Airflow</title><meta property="og:title" content="Community" />
-<meta property="og:description" content="Platform created by community to programmatically author, schedule and monitor workflows." />
+<meta property="og:description" content="Platform created by the community to programmatically author, schedule and monitor workflows." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/community/" />
 
 <meta property="og:image" content="/images/feature-image.png" />
 <meta property="og:site_name" content="Apache Airflow" />
 <meta itemprop="name" content="Community">
-<meta itemprop="description" content="Platform created by community to programmatically author, schedule and monitor workflows.">
+<meta itemprop="description" content="Platform created by the community to programmatically author, schedule and monitor workflows.">
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/images/feature-image.png"/>
 
 <meta name="twitter:title" content="Community"/>
-<meta name="twitter:description" content="Platform created by community to programmatically author, schedule and monitor workflows."/>
+<meta name="twitter:description" content="Platform created by the community to programmatically author, schedule and monitor workflows."/>
 
 
 <script type="application/javascript">
@@ -72,20 +72,20 @@ if (!doNotTrack) {
   crossorigin="anonymous"></script>
 
 
-<meta name="description" content="Platform created by community to programmatically author, schedule and monitor workflows." />
+<meta name="description" content="Platform created by the community to programmatically author, schedule and monitor workflows." />
 
 
 
     
-    <link rel="preload" href="/scss/main-custom.min.4eb16e49e3af8e739304de8d0279dae20d66dbd926c7ffe603c986bd9ba480f3.css" as="style">
-    <link href="/scss/main-custom.min.4eb16e49e3af8e739304de8d0279dae20d66dbd926c7ffe603c986bd9ba480f3.css" rel="stylesheet" integrity="">
+    <link rel="preload" href="/scss/main-custom.min.9251b178ce80bc6593843deaadde6bdac8daa60bc253a823a29cfcf5a3466ef4.css" as="style">
+    <link href="/scss/main-custom.min.9251b178ce80bc6593843deaadde6bdac8daa60bc253a823a29cfcf5a3466ef4.css" rel="stylesheet" integrity="">
 
 
 
-<link rel="preload" href="/main.b2992.js" as="script">
-<link rel="preload" href="/chunk-1.b2992.js" as="script">
+<link rel="preload" href="/main.69199.js" as="script">
+<link rel="preload" href="/chunk-1.69199.js" as="script">
 
-<link rel="preload" href="/chunk-4.b2992.js" as="script">
+<link rel="preload" href="/chunk-4.69199.js" as="script">
 
 
 
@@ -396,18 +396,25 @@ if (!doNotTrack) {
         </div>
     </summary>
     <div class="accordion__content indented">
-    <p class="bodytext__medium--brownish-grey">
-        The preferred channel for discussion is using the official mailing lists.
-        To subscribe, send an email to:
-    </p>
-    <ul class="ticks-blue mx-auto">
+    <ol class="counter-blue mx-auto">
         <li>
-            Users list: <a class="list-link" href="mailto:users-subscribe@airflow.apache.org">users-subscribe@airflow.apache.org</a>
+            <p class="bodytext__medium--brownish-grey">
+                The preferred channel for discussion is using the official Apache Airflow mailing lists.
+                To subscribe, send an email to:
+            </p>
+            <ul class="ticks-blue mx-auto">
+                <li>
+                    Users list: <a class="list-link" href="mailto:users-subscribe@airflow.apache.org">users-subscribe@airflow.apache.org</a> <small>and <a class="list-link" href="mailto:users-unsubscribe@airflow.apache.org">users-unsubscribe@airflow.apache.org</a> to unsubscribe</small>
+                </li>
+                <li>
+                    Dev list: <a class="list-link" href="mailto:dev-subscribe@airflow.apache.org">dev-subscribe@airflow.apache.org</a> <small>and <a class="list-link" href="mailto:dev-unsubscribe@airflow.apache.org">dev-unsubscribe@airflow.apache.org</a> to unsubscribe</small>
+                </li>
+            </ul>
         </li>
-        <li>
-            Dev list: <a class="list-link" href="mailto:dev-subscribe@airflow.apache.org">dev-subscribe@airflow.apache.org</a>
-        </li>
-    </ul>
+        <p class="bodytext__medium--brownish-grey">
+            For ad-hoc questions you can use the official Slack of Airflow. See <b>"Ask a question"</b> below.
+        </p>
+    </ol>
     </div>
 </details>
 
@@ -428,7 +435,7 @@ if (!doNotTrack) {
             
             <div class="accordion__summary-content--text">
                 <h4 class="accordion__summary-content--header  subtitle__large--greyish-brown ">Report a bug</h4>
-                <span class="bodytext__medium--brownish-grey">Use our <a href="https://issues.apache.org/jira/projects/AIRFLOW/issues/" target="_blank">Jira</a> to create a ticket.</span>
+                <span class="bodytext__medium--brownish-grey">Use our <a href="https://github.com/apache/airflow/issues" target="_blank">Github</a> to create a ticket.</span>
             </div>
         </div>
     </summary>
@@ -465,18 +472,20 @@ if (!doNotTrack) {
     </summary>
     <div class="accordion__content indented">
     <ol class="counter-blue mx-auto">
-        <li>Join the devlist, look link above</li>
         <li>
-            Join <a href="https://apache-airflow.slack.com/messages/troubleshooting">#troubleshooting</a> and <a
-                    href="https://apache-airflow.slack.com/messages/development">#development</a> channels on <a
-                    href="https://apache-airflow.slack.com/">slack</a> where you can look for
-            help in using and developing Airflow respectively.
+            <a href="https://apache-airflow-slack.herokuapp.com/">Join the Apache Airflow slack</a>.
+            After creating account in slack you can join
+            <a href="https://apache-airflow.slack.com/messages/troubleshooting">#troubleshooting</a> and
+            <a href="https://apache-airflow.slack.com/messages/development">#development</a>
+            where you can look for help in using and developing Airflow respectively.
+        </li>
+        <li>Ask at the devlist, see <b>"Join the devlist"</b> link above</li>
+        <li>Check <a href="https://stackoverflow.com/questions/tagged/airflow">Stack Overflow</a></li>
+        <li>
+            Remember that Airflow is a community driven project, so in case of
+            constant technical support please consider hiring a consultancy company.
         </li>
     </ol>
-    <p class="bodytext__medium--brownish-grey">
-        But remember that Airflow is a community driven project, so in case of
-        constant technical support please consider hiring a consultancy company.
-    </p>
     </div>
 </details>
 
@@ -503,10 +512,9 @@ if (!doNotTrack) {
     </summary>
     <div class="accordion__content indented">
     <ol class="counter-blue mx-auto">
-        <li>Create account at Airflow JIRA <a href="https://issues.apache.org">[Sign up]</a></li>
+        <li>Create account at Github <a href="https://github.com">[Sign up]</a></li>
         <li>
-            Create new issue and as its type use ‘feature’. Try to put in the description as much information as you can
-            to clarify your idea.
+            Create <a href="https://github.com/apache/airflow/issues/new/choose">new issue</a> and choose ‘Feature request’. Try to put in the description as much information as you can to clarify your idea.
         </li>
         <li>
             We encourage you to open a PR with your implementation of the feature. It would be great if you would take a
@@ -540,10 +548,9 @@ if (!doNotTrack) {
     </summary>
     <div class="accordion__content indented">
     <ol class="counter-blue mx-auto">
-        <li>Create account at Airflow JIRA <a href="https://issues.apache.org">[Sign up]</a></li>
+        <li>Create account at Github <a href="https://github.com">[Sign up]</a></li>
         <li>
-            Create new issue and as its type use ‘bug’. Try to put in the description as much information as you can
-            including replication steps, tracebacks and screens.
+            Create <a href="https://github.com/apache/airflow/issues/new/choose">new issue</a> and choose ‘Bug report’. Try to put in the description as much information as you can including replication steps, tracebacks and screens.
         </li>
         <li>
             We encourage you to open a PR with bug fix. It would be great if you would take a look at our
@@ -576,8 +583,7 @@ if (!doNotTrack) {
     </summary>
     <div class="accordion__content indented">
     <ol class="counter-blue mx-auto">
-        <li>Open a PR with changes (no need for jira issue)</li>
-        <li>Prefix it with “[AIRFLOW-XXX]”.</li>
+        <li>Open a PR with changes</li>
         <li>
             If you are not sure about your changes feel free to post a question on #documentation channel on our <a
                     href="https://apache-airflow.slack.com">Slack</a>.
@@ -632,7 +638,7 @@ if (!doNotTrack) {
     </div>
     
 </div>
-<h5 class="community--commiters-header large-margin">Project Management Committee</h5>
+<h5 class="community--committers-header large-margin">Project Management Committee</h5>
 <div id="pmc-container" class="list-items">
     
     <div class="list-item">
@@ -641,14 +647,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/aijamalnk.png" alt="Commiter Aizhamal Nurmamat kyzy" class="avatar"/>
-        <p class="box-event__commiter--nick">@aijamalnk</p>
+        <img src="https://github.com/aijamalnk.png" alt="Committer Aizhamal Nurmamat kyzy" class="avatar"/>
+        <p class="box-event__committer--nick">@aijamalnk</p>
         <p class="bodytext__medium--brownish-grey">Aizhamal Nurmamat kyzy</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/aijamalnk" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/aijamalnk" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -671,14 +677,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/saguziel.png" alt="Commiter Alex Guziel" class="avatar"/>
-        <p class="box-event__commiter--nick">@saguziel</p>
+        <img src="https://github.com/saguziel.png" alt="Committer Alex Guziel" class="avatar"/>
+        <p class="box-event__committer--nick">@saguziel</p>
         <p class="bodytext__medium--brownish-grey">Alex Guziel</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/saguziel" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/saguziel" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -701,14 +707,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/alexvanboxel.png" alt="Commiter Alex Van Boxel" class="avatar"/>
-        <p class="box-event__commiter--nick">@alexvanboxel</p>
+        <img src="https://github.com/alexvanboxel.png" alt="Committer Alex Van Boxel" class="avatar"/>
+        <p class="box-event__committer--nick">@alexvanboxel</p>
         <p class="bodytext__medium--brownish-grey">Alex Van Boxel</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/alexvanboxel" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/alexvanboxel" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -731,14 +737,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/arthwr.png" alt="Commiter Arthur Wiedmer" class="avatar"/>
-        <p class="box-event__commiter--nick">@arthur</p>
+        <img src="https://github.com/arthwr.png" alt="Committer Arthur Wiedmer" class="avatar"/>
+        <p class="box-event__committer--nick">@arthur</p>
         <p class="bodytext__medium--brownish-grey">Arthur Wiedmer</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/arthwr" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/arthwr" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -761,14 +767,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/ashb.png" alt="Commiter Ash Berlin-Taylor" class="avatar"/>
-        <p class="box-event__commiter--nick">@ash</p>
+        <img src="https://github.com/ashb.png" alt="Committer Ash Berlin-Taylor" class="avatar"/>
+        <p class="box-event__committer--nick">@ash</p>
         <p class="bodytext__medium--brownish-grey">Ash Berlin-Taylor</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/ashb" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/ashb" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -791,14 +797,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/bolkedebruin.png" alt="Commiter Bolke de Bruin" class="avatar"/>
-        <p class="box-event__commiter--nick">@bolke</p>
+        <img src="https://github.com/bolkedebruin.png" alt="Committer Bolke de Bruin" class="avatar"/>
+        <p class="box-event__committer--nick">@bolke</p>
         <p class="bodytext__medium--brownish-grey">Bolke de Bruin</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/bolkedebruin" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/bolkedebruin" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -821,14 +827,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/criccomini.png" alt="Commiter Chris Riccomini" class="avatar"/>
-        <p class="box-event__commiter--nick">@criccomini</p>
+        <img src="https://github.com/criccomini.png" alt="Committer Chris Riccomini" class="avatar"/>
+        <p class="box-event__committer--nick">@criccomini</p>
         <p class="bodytext__medium--brownish-grey">Chris Riccomini</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/criccomini" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/criccomini" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -851,14 +857,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/aoen.png" alt="Commiter Dan Davydov" class="avatar"/>
-        <p class="box-event__commiter--nick">@davydov</p>
+        <img src="https://github.com/aoen.png" alt="Committer Dan Davydov" class="avatar"/>
+        <p class="box-event__committer--nick">@davydov</p>
         <p class="bodytext__medium--brownish-grey">Dan Davydov</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/aoen" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/aoen" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -881,14 +887,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/fokko.png" alt="Commiter Fokko Driesprong" class="avatar"/>
-        <p class="box-event__commiter--nick">@fokko</p>
+        <img src="https://github.com/fokko.png" alt="Committer Fokko Driesprong" class="avatar"/>
+        <p class="box-event__committer--nick">@fokko</p>
         <p class="bodytext__medium--brownish-grey">Fokko Driesprong</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/fokko" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/fokko" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -911,14 +917,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/hiteshs.png" alt="Commiter Hitesh Shah" class="avatar"/>
-        <p class="box-event__commiter--nick">@hitesh</p>
+        <img src="https://github.com/hiteshs.png" alt="Committer Hitesh Shah" class="avatar"/>
+        <p class="box-event__committer--nick">@hitesh</p>
         <p class="bodytext__medium--brownish-grey">Hitesh Shah</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/hiteshs" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/hiteshs" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -941,14 +947,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/jghoman.png" alt="Commiter Jakob Homan" class="avatar"/>
-        <p class="box-event__commiter--nick">@jghoman</p>
+        <img src="https://github.com/jghoman.png" alt="Committer Jakob Homan" class="avatar"/>
+        <p class="box-event__committer--nick">@jghoman</p>
         <p class="bodytext__medium--brownish-grey">Jakob Homan</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/jghoman" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/jghoman" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -971,14 +977,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/potiuk.png" alt="Commiter Jarek Potiuk" class="avatar"/>
-        <p class="box-event__commiter--nick">@potiuk</p>
+        <img src="https://github.com/potiuk.png" alt="Committer Jarek Potiuk" class="avatar"/>
+        <p class="box-event__committer--nick">@potiuk</p>
         <p class="bodytext__medium--brownish-grey">Jarek Potiuk</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/potiuk" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/potiuk" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1001,14 +1007,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/jlowin.png" alt="Commiter Jeremiah Lowin" class="avatar"/>
-        <p class="box-event__commiter--nick">@jlowin</p>
+        <img src="https://github.com/jlowin.png" alt="Committer Jeremiah Lowin" class="avatar"/>
+        <p class="box-event__committer--nick">@jlowin</p>
         <p class="bodytext__medium--brownish-grey">Jeremiah Lowin</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/jlowin" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/jlowin" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1031,14 +1037,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/jgao54.png" alt="Commiter Joy Gao" class="avatar"/>
-        <p class="box-event__commiter--nick">@joygao</p>
+        <img src="https://github.com/jgao54.png" alt="Committer Joy Gao" class="avatar"/>
+        <p class="box-event__committer--nick">@joygao</p>
         <p class="bodytext__medium--brownish-grey">Joy Gao</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/jgao54" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/jgao54" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1061,14 +1067,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/kaxil.png" alt="Commiter Kaxil Naik" class="avatar"/>
-        <p class="box-event__commiter--nick">@kaxil</p>
+        <img src="https://github.com/kaxil.png" alt="Committer Kaxil Naik" class="avatar"/>
+        <p class="box-event__committer--nick">@kaxil</p>
         <p class="bodytext__medium--brownish-grey">Kaxil Naik</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/kaxil" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/kaxil" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1091,14 +1097,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/KevinYang21.png" alt="Commiter Kevin Yang" class="avatar"/>
-        <p class="box-event__commiter--nick">@KevinYang21</p>
+        <img src="https://github.com/KevinYang21.png" alt="Committer Kevin Yang" class="avatar"/>
+        <p class="box-event__committer--nick">@KevinYang21</p>
         <p class="bodytext__medium--brownish-grey">Kevin Yang</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/KevinYang21" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/KevinYang21" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1121,14 +1127,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/mistercrunch.png" alt="Commiter Maxime Beauchemin" class="avatar"/>
-        <p class="box-event__commiter--nick">@mistercrunch</p>
+        <img src="https://github.com/mistercrunch.png" alt="Committer Maxime Beauchemin" class="avatar"/>
+        <p class="box-event__committer--nick">@mistercrunch</p>
         <p class="bodytext__medium--brownish-grey">Maxime Beauchemin</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/mistercrunch" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/mistercrunch" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1151,14 +1157,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/r39132.png" alt="Commiter Siddharth Anand" class="avatar"/>
-        <p class="box-event__commiter--nick">@sanand</p>
+        <img src="https://github.com/r39132.png" alt="Committer Siddharth Anand" class="avatar"/>
+        <p class="box-event__committer--nick">@sanand</p>
         <p class="bodytext__medium--brownish-grey">Siddharth Anand</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/r39132" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/r39132" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1181,14 +1187,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/msumit.png" alt="Commiter Sumit Maheshwari" class="avatar"/>
-        <p class="box-event__commiter--nick">@msumit</p>
+        <img src="https://github.com/msumit.png" alt="Committer Sumit Maheshwari" class="avatar"/>
+        <p class="box-event__committer--nick">@msumit</p>
         <p class="bodytext__medium--brownish-grey">Sumit Maheshwari</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/msumit" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/msumit" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1211,14 +1217,104 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/feng-tao.png" alt="Commiter Tao Feng" class="avatar"/>
-        <p class="box-event__commiter--nick">@tfeng</p>
+        <img src="https://github.com/feng-tao.png" alt="Committer Tao Feng" class="avatar"/>
+        <p class="box-event__committer--nick">@tfeng</p>
         <p class="bodytext__medium--brownish-grey">Tao Feng</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/feng-tao" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/feng-tao" class="box-event__committer--social-media-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
+    <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
+          data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
+</svg>
+
+                    </a>
+                
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    <div class="list-item">
+        
+
+
+<div class="card">
+    <div class="box-event">
+        <img src="https://github.com/dimberman.png" alt="Committer Daniel Imberman" class="avatar"/>
+        <p class="box-event__committer--nick">@dimberman</p>
+        <p class="bodytext__medium--brownish-grey">Daniel Imberman</p>
+        <div class="box-event__committer--social-media-container">
+            
+                
+                
+                    <a href="https://github.com/dimberman" class="box-event__committer--social-media-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
+    <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
+          data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
+</svg>
+
+                    </a>
+                
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    <div class="list-item">
+        
+
+
+<div class="card">
+    <div class="box-event">
+        <img src="https://github.com/mik-laj.png" alt="Committer Kamil Breguła" class="avatar"/>
+        <p class="box-event__committer--nick">@mik-laj</p>
+        <p class="bodytext__medium--brownish-grey">Kamil Breguła</p>
+        <div class="box-event__committer--social-media-container">
+            
+                
+                
+                    <a href="https://github.com/mik-laj" class="box-event__committer--social-media-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
+    <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
+          data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
+</svg>
+
+                    </a>
+                
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    <div class="list-item">
+        
+
+
+<div class="card">
+    <div class="box-event">
+        <img src="https://github.com/turbaszek.png" alt="Committer Tomek Urbaszek" class="avatar"/>
+        <p class="box-event__committer--nick">@turbaszek</p>
+        <p class="bodytext__medium--brownish-grey">Tomek Urbaszek</p>
+        <div class="box-event__committer--social-media-container">
+            
+                
+                
+                    <a href="https://github.com/turbaszek" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1243,8 +1339,8 @@ if (!doNotTrack) {
 
 </div>
 
-<h5 class="community--commiters-header">Commiters</h5>
-<div id="commiters-container" class="list-items">
+<h5 class="community--committers-header">Committers</h5>
+<div id="committers-container" class="list-items">
     
     <div class="list-item">
         
@@ -1252,14 +1348,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/BasPH.png" alt="Commiter Bas Harenslak" class="avatar"/>
-        <p class="box-event__commiter--nick">@BasPH</p>
+        <img src="https://github.com/BasPH.png" alt="Committer Bas Harenslak" class="avatar"/>
+        <p class="box-event__committer--nick">@BasPH</p>
         <p class="bodytext__medium--brownish-grey">Bas Harenslak</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/BasPH" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/BasPH" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1282,14 +1378,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/milton0825.png" alt="Commiter Chao-Han Tsai" class="avatar"/>
-        <p class="box-event__commiter--nick">@milton0825</p>
+        <img src="https://github.com/milton0825.png" alt="Committer Chao-Han Tsai" class="avatar"/>
+        <p class="box-event__committer--nick">@milton0825</p>
         <p class="bodytext__medium--brownish-grey">Chao-Han Tsai</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/milton0825" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/milton0825" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1312,44 +1408,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/dimberman.png" alt="Commiter Daniel Imberman" class="avatar"/>
-        <p class="box-event__commiter--nick">@dimberman</p>
-        <p class="bodytext__medium--brownish-grey">Daniel Imberman</p>
-        <div class="box-event__commiter--social-media-container">
-            
-                
-                
-                    <a href="https://github.com/dimberman" class="box-event__commiter--social-media-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
-    <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
-          data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
-</svg>
-
-                    </a>
-                
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    
-    <div class="list-item">
-        
-
-
-<div class="card">
-    <div class="box-event">
-        <img src="https://github.com/feluelle.png" alt="Commiter Felix Uellendall" class="avatar"/>
-        <p class="box-event__commiter--nick">@feluelle</p>
+        <img src="https://github.com/feluelle.png" alt="Committer Felix Uellendall" class="avatar"/>
+        <p class="box-event__committer--nick">@feluelle</p>
         <p class="bodytext__medium--brownish-grey">Felix Uellendall</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/feluelle" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/feluelle" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1372,14 +1438,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/jmcarp.png" alt="Commiter Joshua Carp" class="avatar"/>
-        <p class="box-event__commiter--nick">@jmcarp</p>
+        <img src="https://github.com/jmcarp.png" alt="Committer Joshua Carp" class="avatar"/>
+        <p class="box-event__committer--nick">@jmcarp</p>
         <p class="bodytext__medium--brownish-grey">Joshua Carp</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/jmcarp" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/jmcarp" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1402,14 +1468,14 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/mik-laj.png" alt="Commiter Kamil Breguła" class="avatar"/>
-        <p class="box-event__commiter--nick">@mik-laj</p>
-        <p class="bodytext__medium--brownish-grey">Kamil Breguła</p>
-        <div class="box-event__commiter--social-media-container">
+        <img src="https://github.com/zhongjiajie.png" alt="Committer Jiajie Zhong" class="avatar"/>
+        <p class="box-event__committer--nick">@Jiajie Zhong</p>
+        <p class="bodytext__medium--brownish-grey">Jiajie Zhong</p>
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/mik-laj" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/zhongjiajie" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1432,10 +1498,10 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="/icons/commiter-placeholder.svg" alt="Commiter Patrick Leo Tardif" class="avatar"/>
-        <p class="box-event__commiter--nick">@pltardif</p>
+        <img src="/images/committer-placeholder.svg" alt="Committer Patrick Leo Tardif" class="avatar"/>
+        <p class="box-event__committer--nick">@pltardif</p>
         <p class="bodytext__medium--brownish-grey">Patrick Leo Tardif</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
             
             
@@ -1451,14 +1517,104 @@ if (!doNotTrack) {
 
 <div class="card">
     <div class="box-event">
-        <img src="https://github.com/XD-DENG.png" alt="Commiter Xiaodong Deng" class="avatar"/>
-        <p class="box-event__commiter--nick">@XD-DENG</p>
+        <img src="https://github.com/XD-DENG.png" alt="Committer Xiaodong Deng" class="avatar"/>
+        <p class="box-event__committer--nick">@XD-DENG</p>
         <p class="bodytext__medium--brownish-grey">Xiaodong Deng</p>
-        <div class="box-event__commiter--social-media-container">
+        <div class="box-event__committer--social-media-container">
             
                 
                 
-                    <a href="https://github.com/XD-DENG" class="box-event__commiter--social-media-icon">
+                    <a href="https://github.com/XD-DENG" class="box-event__committer--social-media-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
+    <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
+          data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
+</svg>
+
+                    </a>
+                
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    <div class="list-item">
+        
+
+
+<div class="card">
+    <div class="box-event">
+        <img src="https://github.com/houqp.png" alt="Committer Qingping Hou" class="avatar"/>
+        <p class="box-event__committer--nick">@houqp</p>
+        <p class="bodytext__medium--brownish-grey">Qingping Hou</p>
+        <div class="box-event__committer--social-media-container">
+            
+                
+                
+                    <a href="https://github.com/houqp" class="box-event__committer--social-media-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
+    <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
+          data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
+</svg>
+
+                    </a>
+                
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    <div class="list-item">
+        
+
+
+<div class="card">
+    <div class="box-event">
+        <img src="https://github.com/ryw.png" alt="Committer Ry Walker" class="avatar"/>
+        <p class="box-event__committer--nick">@ryw</p>
+        <p class="bodytext__medium--brownish-grey">Ry Walker</p>
+        <div class="box-event__committer--social-media-container">
+            
+                
+                
+                    <a href="https://github.com/ryw" class="box-event__committer--social-media-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
+    <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
+          data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
+</svg>
+
+                    </a>
+                
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+    <div class="list-item">
+        
+
+
+<div class="card">
+    <div class="box-event">
+        <img src="https://github.com/leahecole.png" alt="Committer Leah Cole" class="avatar"/>
+        <p class="box-event__committer--nick">@leahecole</p>
+        <p class="bodytext__medium--brownish-grey">Leah Cole</p>
+        <div class="box-event__committer--social-media-container">
+            
+                
+                
+                    <a href="https://github.com/leahecole" class="box-event__committer--social-media-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30.76" height="30">
     <path d="M15.379 0a15.381 15.381 0 00-4.86 29.974c.769.141 1.05-.334 1.05-.741 0-.365-.013-1.332-.021-2.616-4.278.929-5.181-2.062-5.181-2.062a4.071 4.071 0 00-1.708-2.25c-1.4-.954.106-.935.106-.935a3.231 3.231 0 012.356 1.585 3.274 3.274 0 004.476 1.278 3.287 3.287 0 01.976-2.056c-3.415-.388-7.005-1.707-7.005-7.6a5.947 5.947 0 011.583-4.127 5.53 5.53 0 01.151-4.07s1.291-.413 4.229 1.577a14.577 14.577 0 017.7 0c2.936-1.99 4.225-1.577 4.225-1.577a5.523 5.523 0 01.153 4.07 5.937 5.937 0 011.581 4.127c0 5.909-3.6 7.209-7.022 7.589a3.672 3.672 0 011.044 2.848c0 2.056-.019 3.715-.019 4.219 0 .411.277.89 1.057.74A15.382 15.382 0 0015.378.001z"
           data-name="Path 224" fill="#51504f" fill-rule="evenodd"/>
@@ -1479,7 +1635,7 @@ if (!doNotTrack) {
 <div class="show-more-button">
     
 
-<button id="show-more-commiters" class="btn-filled bodytext__medium--white ">Show more</button>
+<button id="show-more-committers" class="btn-filled bodytext__medium--white ">Show more</button>
 
 </div>
 
@@ -1488,7 +1644,7 @@ if (!doNotTrack) {
 
 <div class="base-layout--button">
     
-    <a href=https://github.com/apache/airflow-site/edit/aip-11/landing-pages/site/content/en/community/_index.html>
+    <a href=https://github.com/apache/airflow-site/edit/master/landing-pages/site/content/en/community/_index.html>
         
 
 
@@ -1518,17 +1674,6 @@ if (!doNotTrack) {
                         <a class="footer-section__media-section--link" target="_blank" href="https://github.com/apache/airflow/">
                             <svg xmlns="http://www.w3.org/2000/svg" width="46.14" height="45" viewBox="0 0 46.14 45">
     <path id="Path_207" d="M228.962 1078.578a23.072 23.072 0 0 0-7.29 44.96c1.154.212 1.574-.5 1.574-1.112 0-.548-.02-2-.031-3.924-6.417 1.394-7.771-3.093-7.771-3.093a6.109 6.109 0 0 0-2.562-3.375c-2.095-1.431.159-1.4.159-1.4a4.846 4.846 0 0 1 3.533 2.377c2.058 3.525 5.4 2.507 6.714 1.917a4.926 4.926 0 0 1 1.464-3.084c-5.123-.582-10.508-2.562-10.508-11.4a8.919 8.919 0 0 1 2.374-6.191 8.3 8.3 0 0 1 .226-6.105s1.937-.62 6.344 2.365a21.857 21.857 0 0 1 11.551 0c4.4-2.985 6.338-2.365 6.338-2.365a8.284 8.284 0 0 1 .23 6.105 8.9 8.9 0 0 1 2.371 6.191c0 8.862-5.393 10.812-10.533 11.384a5.506 5.506 0 0 1 1.566 4.272c0 3.084-.028 5.572-.028 6.329 0 .617.415 1.334 1.586 1.109a23.073 23.073 0 0 0-7.308-44.958z" fill="#fff" fill-rule="evenodd" data-name="Path 207" transform="translate(-205.894 -1078.578)"/>
-</svg>
-
-                        </a>
-                    
-                        <a class="footer-section__media-section--link" target="_blank" href="https://jira.apache.org/jira/projects/AIRFLOW/">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
-    <g id="Group_210" data-name="Group 210" transform="translate(-339.789 -1315.282)">
-        <path id="Path_218" d="M394.82 1315.282h-21.671a9.784 9.784 0 0 0 9.784 9.778h3.986v3.857a9.784 9.784 0 0 0 9.784 9.771v-21.523a1.884 1.884 0 0 0-1.883-1.883z" fill="#fff" data-name="Path 218" transform="translate(-11.914)"/>
-        <path id="Path_219" d="M378.14 1332.072h-21.671a9.778 9.778 0 0 0 9.778 9.778h4.018v3.857a9.784 9.784 0 0 0 9.752 9.778v-21.536a1.877 1.877 0 0 0-1.877-1.877z" fill="#fff" data-name="Path 219" transform="translate(-5.957 -5.996)"/>
-        <path id="Path_220" d="M361.46 1348.862h-21.671a9.778 9.778 0 0 0 9.778 9.778h3.992v3.857a9.778 9.778 0 0 0 9.778 9.778v-21.529a1.883 1.883 0 0 0-1.877-1.884z" fill="#fff" data-name="Path 220" transform="translate(0 -11.993)"/>
-    </g>
 </svg>
 
                         </a>
@@ -1598,7 +1743,7 @@ if (!doNotTrack) {
     </div>
     <div class="footer-section footer-section__policies-section">
         <div class="footer-section">
-            <span>&copy; The Apache Software Foundation 2019</span>
+            <span>&copy; The Apache Software Foundation 2020</span>
             <div class="footer-section__policies-section--policies">
                 
                     
@@ -1644,7 +1789,8 @@ if (!doNotTrack) {
             </div>
         </div>
         <span class="footer-section__policies-section--disclaimer">
-            Apache Airflow, Apache, Airflow, the Airflow logo, and the Apache feather logo are either registered trademarks or trademarks of The Apache Software Foundation.
+            Apache Airflow, Apache, Airflow, the Airflow logo, and the Apache feather logo are either registered trademarks or trademarks of
+            <a href="https://apache.org/">The Apache Software Foundation</a>.
             All other products or name brands are trademarks of their respective holders, including The Apache Software Foundation.
         </span>
     </div>
@@ -1666,6 +1812,6 @@ if (!doNotTrack) {
 </body>
 
 
-    <script src="/main.b2992.js"></script>
+    <script src="/main.69199.js"></script>
 
 </html>
