@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apache Airflow – Community</title>
+    <title>Apache Airflow – community</title>
     <link>/blog/tags/community/</link>
-    <description>Recent content in Community on Apache Airflow</description>
+    <description>Recent content in community on Apache Airflow</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0000</lastBuildDate>
     
