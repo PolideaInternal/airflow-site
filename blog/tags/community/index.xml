@@ -1,10 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Apache Airflow – community</title>
+    <title>Apache Airflow – Community</title>
     <link>/blog/tags/community/</link>
-    <description>Recent content in community on Apache Airflow</description>
+    <description>Recent content in Community on Apache Airflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="/blog/tags/community/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,6 +13,231 @@
         
       
     
+    
+    <item>
+      <title>Blog: Journey with Airflow as an Outreachy Intern</title>
+      <link>/blog/experience-with-airflow-as-an-outreachy-intern/</link>
+      <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/experience-with-airflow-as-an-outreachy-intern/</guid>
+      <description>
+        
+        
+        
+
+&lt;p&gt;&lt;a href=&#34;https://www.outreachy.org/&#34; target=&#34;_blank&#34;&gt;Outreachy&lt;/a&gt; is a program which organises three months paid internships with FOSS
+projects for people who are typically underrepresented in those projects.&lt;/p&gt;
+
+&lt;h3 id=&#34;contribution-period&#34;&gt;Contribution Period&lt;/h3&gt;
+
+&lt;p&gt;The first thing I had to do was choose a project under an organisation. After going through all the projects
+I chose “Extending the REST API of Apache Airflow”, because I had a good idea of what  REST API(s) are, so I
+thought it would be easier to get started with the contributions. The next step was to set up Airflow’s dev
+environment which thanks to &lt;a href=&#34;https://github.com/apache/airflow/blob/master/BREEZE.rst&#34; target=&#34;_blank&#34;&gt;Breeze&lt;/a&gt;, was a breeze.
+Since I had never contributed to FOSS before so this part was overwhelming but there were plenty of issues
+labelled “good first issues” with detailed descriptions and some even had code snippets so luckily that nudged
+me in the right direction. These things about Airflow and the positive vibes from the community were the reasons
+why I chose to stick with Airflow as my Outreachy project.&lt;/p&gt;
+
+&lt;h3 id=&#34;internship-period&#34;&gt;Internship Period&lt;/h3&gt;
+
+&lt;p&gt;My first PR was followed by many new experiences one of them being that I introduced a
+&lt;a href=&#34;https://github.com/apache/airflow/pull/7680#issuecomment-619763051&#34; target=&#34;_blank&#34;&gt;bug&lt;/a&gt; in it;).
+But nonetheless it made me familiar with the feedback loop and the feedback on my subsequent
+&lt;a href=&#34;https://github.com/apache/airflow/pulls?q=is%3Apr+author%3AOmairK+&#34; target=&#34;_blank&#34;&gt;PRs&lt;/a&gt; was the focal point of the overall
+learning experience I went through, which boosted my confidence to contribute more and move out of my comfort zone.
+I wanted to learn more about the things that happen under the Airflow’s hood so I started filtering out recent PRs
+dealing with different components and I would go through the code changes along with discussion that would help me
+get a better understanding of the whole workflow. &lt;a href=&#34;https://lists.apache.org/list.html?dev@airflow.apache.org&#34; target=&#34;_blank&#34;&gt;Airflow’s mailing list&lt;/a&gt;
+was also a great source of knowledge.&lt;/p&gt;
+
+&lt;p&gt;The API related PRs that I worked on helped me with some of the important concepts like:&lt;/p&gt;
+
+&lt;p&gt;1) &lt;a href=&#34;https://github.com/apache/airflow/pull/9329&#34; target=&#34;_blank&#34;&gt;Pool CRUD endpoints&lt;/a&gt; where pools limit the execution parallelism.&lt;/p&gt;
+
+&lt;p&gt;2) &lt;a href=&#34;https://github.com/apache/airflow/pull/9597&#34; target=&#34;_blank&#34;&gt;Tasks&lt;/a&gt; determine the actual work that has to be carried out.&lt;/p&gt;
+
+&lt;p&gt;3) &lt;a href=&#34;https://github.com/apache/airflow/pull/9473&#34; target=&#34;_blank&#34;&gt;DAG&lt;/a&gt; which represents the structure for a collection
+  of tasks. It keeps track of tasks, their dependencies and the sequence in which they have to run.&lt;/p&gt;
+
+&lt;p&gt;4) &lt;a href=&#34;https://github.com/apache/airflow/pull/9473&#34; target=&#34;_blank&#34;&gt;Dag Runs&lt;/a&gt; that are the instantiation of DAG(s) in time.&lt;/p&gt;
+
+&lt;p&gt;Through actively and passively participating in discussions I learnt that even if there is a difference of opinion
+one could always learn from the different approaches, and &lt;a href=&#34;https://github.com/apache/airflow/pull/8721&#34; target=&#34;_blank&#34;&gt;this PR&lt;/a&gt; with
+more than 300+ comments is the proof of it. I also started reviewing small PRs which gave me the amazing opportunity
+to interact with new people. Throughout my internship I learnt a lot about different frameworks and technologies
+but the biggest takeaway for me was that a code is read more often than it&amp;rsquo;s written, and I started writing code with
+that in mind.&lt;/p&gt;
+
+&lt;h3 id=&#34;wrapping-up&#34;&gt;Wrapping Up&lt;/h3&gt;
+
+&lt;p&gt;So with my project of extending Airflow’s REST API as well as the Outreachy internship coming to an end I would like
+to thank my mentors &lt;a href=&#34;https://github.com/potiuk&#34; target=&#34;_blank&#34;&gt;Jarek Potiuk&lt;/a&gt;, &lt;a href=&#34;https://github.com/kaxil&#34; target=&#34;_blank&#34;&gt;Kaxil Naik&lt;/a&gt; and
+&lt;a href=&#34;https://github.com/mik-laj&#34; target=&#34;_blank&#34;&gt;Kamil Breguła&lt;/a&gt; for the patience and the time they invested in mentoring me and
+the Airflow community for making me feel so welcomed. I plan to stick around and contribute to give back to the
+community that has been made my summer, one to remember.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Blog: Apache Airflow For Newcomers</title>
+      <link>/blog/apache-airflow-for-newcomers/</link>
+      <pubDate>Mon, 17 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/apache-airflow-for-newcomers/</guid>
+      <description>
+        
+        
+        
+
+&lt;p&gt;Apache Airflow is a platform to programmatically author, schedule, and monitor workflows.
+A workflow is a sequence of tasks that processes a set of data. You can think of workflow as the
+path that describes how tasks go from being undone to done. Scheduling, on the other hand, is the
+process of planning, controlling, and optimizing when a particular task should be done.&lt;/p&gt;
+
+&lt;h3 id=&#34;authoring-workflow-in-apache-airflow&#34;&gt;Authoring Workflow in Apache Airflow.&lt;/h3&gt;
+
+&lt;p&gt;Airflow makes it easy to author workflows using python scripts. A &lt;a href=&#34;https://en.wikipedia.org/wiki/Directed_acyclic_graph&#34; target=&#34;_blank&#34;&gt;Directed Acyclic Graph&lt;/a&gt;
+(DAG) represents a workflow in Airflow. It is a collection of tasks in a way that shows each task&amp;rsquo;s
+relationships and dependencies. You can have as many DAGs as you want, and Airflow will execute
+them according to the task&amp;rsquo;s relationships and dependencies. If task B depends on the successful
+execution of another task A, it means Airflow will run task A and only run task B after task A.
+This dependency is very easy to express in Airflow. For example, the above scenario is expressed as&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;task_A &amp;gt;&amp;gt; task_B
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also equivalent to&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;task_A.set_downstream(task_B)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;Simple_dag.png&#34; alt=&#34;Simple Dag&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That helps Airflow to know that it needs to execute task A before task B. Tasks can have far more complex
+relationships to each other than expressed above and Airflow figures out how and when to execute the tasks following
+their relationships and dependencies.
+&lt;img src=&#34;semicomplex.png&#34; alt=&#34;Complex Dag&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Before we discuss the architecture of Airflow that makes scheduling, executing, and monitoring of
+workflow an easy thing, let us discuss the &lt;a href=&#34;https://github.com/apache/airflow/blob/master/BREEZE.rst&#34; target=&#34;_blank&#34;&gt;Breeze environment&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;breeze-environment&#34;&gt;Breeze Environment&lt;/h3&gt;
+
+&lt;p&gt;The breeze environment is the development environment for Airflow where you can run tests, build images,
+build documentations and so many other things. There are excellent
+&lt;a href=&#34;https://github.com/apache/airflow/blob/master/BREEZE.rst&#34; target=&#34;_blank&#34;&gt;documentation and video&lt;/a&gt; on Breeze environment.
+Please check them out. You enter the Breeze environment by running the &lt;code&gt;./breeze&lt;/code&gt; script. You can run all
+the commands mentioned here in the Breeze environment.&lt;/p&gt;
+
+&lt;h3 id=&#34;scheduler&#34;&gt;Scheduler&lt;/h3&gt;
+
+&lt;p&gt;The scheduler is the component that monitors DAGs and triggers those tasks whose dependencies have
+been met. It watches over the DAG folder, checking the tasks in each DAG and triggers them once they
+are ready. It accomplishes this by spawning a process that runs periodically(every minute or so)
+reading the metadata database to check the status of each task and decides what needs to be done.
+The metadata database is where the status of all tasks are recorded. The status can be one of running,
+ success, failed, etc.&lt;/p&gt;
+
+&lt;p&gt;A task is said to be ready when its dependencies have been met. The dependencies include all the data
+necessary for the task to be executed. It should be noted that the scheduler won&amp;rsquo;t trigger your tasks until
+the period it covers has ended. If a task&amp;rsquo;s &lt;code&gt;schedule_interval&lt;/code&gt; is &lt;code&gt;@daily&lt;/code&gt;, the scheduler triggers the task
+at the end of the day and not at the beginning. This is to ensure that the necessary data needed for the tasks
+are ready. It is also possible to trigger tasks manually on the UI.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;a href=&#34;https://github.com/apache/airflow/blob/master/BREEZE.rst&#34; target=&#34;_blank&#34;&gt;Breeze environment&lt;/a&gt;, the scheduler is started by running the command &lt;code&gt;airflow scheduler&lt;/code&gt;. It uses
+the configured production environment. The configuration can be specified in &lt;code&gt;airflow.cfg&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;executor&#34;&gt;Executor&lt;/h3&gt;
+
+&lt;p&gt;Executors are responsible for running tasks. They work with the scheduler to get information about
+what resources are needed to run a task as the task is queued.&lt;/p&gt;
+
+&lt;p&gt;By default, Airflow uses the &lt;a href=&#34;https://airflow.apache.org/docs/stable/executor/sequential.html#sequential-executor&#34; target=&#34;_blank&#34;&gt;SequentialExecutor&lt;/a&gt;.
+ However, this executor is limited and it is the only executor that can be used with SQLite.&lt;/p&gt;
+
+&lt;p&gt;There are many other &lt;a href=&#34;https://airflow.apache.org/docs/stable/executor/index.html&#34; target=&#34;_blank&#34;&gt;executors&lt;/a&gt;,
+ the difference is on the resources they have and how they choose to use the resources. The available executors
+ are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sequential Executor&lt;/li&gt;
+&lt;li&gt;Debug Executor&lt;/li&gt;
+&lt;li&gt;Local Executor&lt;/li&gt;
+&lt;li&gt;Dask Executor&lt;/li&gt;
+&lt;li&gt;Celery Executor&lt;/li&gt;
+&lt;li&gt;Kubernetes Executor&lt;/li&gt;
+&lt;li&gt;Scaling Out with Mesos (community contributed)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CeleryExecutor is a better executor compared to the SequentialExecutor. The CeleryExecutor uses several
+workers to execute a job in a distributed way. If a worker node is ever down, the CeleryExecutor assign its
+task to another worker node. This ensures high availability.&lt;/p&gt;
+
+&lt;p&gt;The CeleryExecutor works closely with the scheduler which adds a message to the queue and the Celery broker
+which delivers the message to a Celery worker to execute.
+You can find more information about the CeleryExecutor and how to configure it at the
+&lt;a href=&#34;https://airflow.apache.org/docs/stable/executor/celery.html#celery-executor&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;webserver&#34;&gt;Webserver&lt;/h3&gt;
+
+&lt;p&gt;The webserver is the web interface (UI) for Airflow. The UI is feature-rich. It makes it easy to
+monitor and troubleshoot DAGs and Tasks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;airflow-ui.png&#34; alt=&#34;airflow UI&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are many actions you can perform on the UI. You can trigger a task, monitor the execution
+including the duration of the task. The UI makes it possible to view the task&amp;rsquo;s dependencies in a
+tree view and graph view. You can view task logs in the UI.&lt;/p&gt;
+
+&lt;p&gt;The web UI is started with the command &lt;code&gt;airflow webserver&lt;/code&gt; in the breeze environment.&lt;/p&gt;
+
+&lt;h3 id=&#34;backend&#34;&gt;Backend&lt;/h3&gt;
+
+&lt;p&gt;By default, Airflow uses the SQLite backend for storing the configuration information, DAG states,
+and much other useful information. This should not be used in production as SQLite can cause a data
+loss.&lt;/p&gt;
+
+&lt;p&gt;You can use PostgreSQL or MySQL as a backend for airflow. It is easy to change to PostgreSQL or MySQL.&lt;/p&gt;
+
+&lt;p&gt;The command &lt;code&gt;./breeze --backend mysql&lt;/code&gt; selects MySQL as the backend when starting the breeze environment.&lt;/p&gt;
+
+&lt;h3 id=&#34;operators&#34;&gt;Operators&lt;/h3&gt;
+
+&lt;p&gt;Operators determine what gets done by a task. Airflow has a lot of builtin Operators. Each operator
+does a specific task. There&amp;rsquo;s a BashOperator that executes a bash command, the PythonOperator which
+calls a python function, AwsBatchOperator which executes a job on AWS Batch and &lt;a href=&#34;https://airflow.apache.org/docs/stable/concepts.html#operators&#34; target=&#34;_blank&#34;&gt;many more&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;sensors&#34;&gt;Sensors&lt;/h4&gt;
+
+&lt;p&gt;Sensors can be described as special operators that are used to monitor a long-running task.
+Just like Operators, there are many predefined sensors in Airflow. These includes&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AthenaSensor: Asks for the state of the Query until it reaches a failure state or success state.&lt;/li&gt;
+&lt;li&gt;AzureCosmosDocumentSensor: Checks for the existence of a document which matches the given query in CosmosDB&lt;/li&gt;
+&lt;li&gt;GoogleCloudStorageObjectSensor:  Checks for the existence of a file in Google Cloud Storage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A list of most of the available sensors can be found in this &lt;a href=&#34;https://airflow.apache.org/docs/stable/_api/airflow/contrib/sensors/index.html?highlight=sensors#module-airflow.contrib.sensors&#34; target=&#34;_blank&#34;&gt;module&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;contributing-to-airflow&#34;&gt;Contributing to Airflow&lt;/h3&gt;
+
+&lt;p&gt;Airflow is an open source project, everyone is welcome to contribute. It is easy to get started thanks
+to the excellent &lt;a href=&#34;https://github.com/apache/airflow/blob/master/CONTRIBUTING.rst&#34; target=&#34;_blank&#34;&gt;documentation on how to get started&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I joined the community about 12 weeks ago through the &lt;a href=&#34;https://www.outreachy.org/&#34; target=&#34;_blank&#34;&gt;Outreachy Program&lt;/a&gt; and have
+completed about &lt;a href=&#34;https://github.com/apache/airflow/pulls/ephraimbuddy&#34; target=&#34;_blank&#34;&gt;40 PRs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It has been an amazing experience! Thanks to my mentors &lt;a href=&#34;https://github.com/potiuk&#34; target=&#34;_blank&#34;&gt;Jarek&lt;/a&gt; and
+&lt;a href=&#34;https://github.com/kaxil&#34; target=&#34;_blank&#34;&gt;Kaxil&lt;/a&gt;, and the community members especially &lt;a href=&#34;https://github.com/mik-laj&#34; target=&#34;_blank&#34;&gt;Kamil&lt;/a&gt;
+and &lt;a href=&#34;https://github.com/turbaszek&#34; target=&#34;_blank&#34;&gt;Tomek&lt;/a&gt; for all their support. I&amp;rsquo;m grateful!&lt;/p&gt;
+
+&lt;p&gt;Thank you so much, &lt;a href=&#34;https://github.com/leahecole&#34; target=&#34;_blank&#34;&gt;Leah E. Cole&lt;/a&gt;, for your wonderful reviews.&lt;/p&gt;
+
+      </description>
+    </item>
     
     <item>
       <title>Blog: Airflow Survey 2019</title>
